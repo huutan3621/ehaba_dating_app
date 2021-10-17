@@ -29,11 +29,11 @@ class WelcomePage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.shade200,
-                      blurRadius: 25.0, // soften the shadow
-                      spreadRadius: 5.0, //extend the shadow
+                      blurRadius: 60.0, // soften the shadow
+                      spreadRadius: 16.0, //extend the shadow
                       offset: Offset(
-                        15.0, // Move to right 10  horizontally
-                        15.0, // Move to bottom 10 Vertically
+                        16.0, // Move to right 10  horizontally
+                        16.0, // Move to bottom 10 Vertically
                       ),
                     )
                   ],
