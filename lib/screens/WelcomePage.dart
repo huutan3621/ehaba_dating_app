@@ -32,8 +32,8 @@ class WelcomePage extends StatelessWidget {
                       blurRadius: 60.0, // soften the shadow
                       spreadRadius: 16.0, //extend the shadow
                       offset: Offset(
-                        16.0, // Move to right 10  horizontally
-                        16.0, // Move to bottom 10 Vertically
+                        16.0, // Move to right 16  horizontally
+                        16.0, // Move to bottom 16 Vertically
                       ),
                     )
                   ],
