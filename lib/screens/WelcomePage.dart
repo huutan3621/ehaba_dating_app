@@ -39,9 +39,6 @@ class WelcomePage extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // main text
-
               Column(
                 children: <Widget>[
                   Text(
@@ -63,9 +60,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(height: 24),
-
               Column(
                 children: <Widget>[
                   // the sign in button
@@ -110,7 +105,6 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(height: 10),
               Text(
                 'Chính sách và quyền riêng tư',
