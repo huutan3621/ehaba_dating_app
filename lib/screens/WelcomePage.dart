@@ -41,23 +41,29 @@ class WelcomePage extends StatelessWidget {
               ),
 
               // main text
-              Text(
-                'ehaba',
-                style: TextStyle(
-                  fontSize: 88.0,
-                  fontFamily: 'Lobster',
-                  fontWeight: FontWeight.normal,
-                  color: kPrimaryColor,
-                ),
+
+              Column(
+                children: <Widget>[
+                  Text(
+                    'ehaba',
+                    style: TextStyle(
+                      fontSize: 88.0,
+                      fontFamily: 'Lobster',
+                      fontWeight: FontWeight.normal,
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                  Text(
+                    'Ế hả bạn? Vào đây cái là hết ế!',
+                    style: TextStyle(
+                      color: kLightTextColor,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 24.0,
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                'Ế hả bạn? Vào đây cái là hết ế!',
-                style: TextStyle(
-                  color: kLightTextColor,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 24.0,
-                ),
-              ),
+
               SizedBox(height: 24),
 
               Column(
