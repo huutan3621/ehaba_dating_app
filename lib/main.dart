@@ -1,3 +1,4 @@
+import 'package:ehaba_dating_app/screens/Notification/notification1.dart';
 import 'package:ehaba_dating_app/screens/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'constraint.dart';
@@ -6,7 +7,7 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: kPrimaryColor, fontFamily: 'Lato'),
+      theme: ThemeData(primaryColor: kPrimaryColor, fontFamily: 'Raleway'),
       home: welcome_page(), //goi homescreen
     ),
   );

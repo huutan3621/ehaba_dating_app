@@ -4,7 +4,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 
 class SignUpPage extends StatefulWidget {
-  const SignUpPage({ Key key }) : super(key: key);
+  const SignUpPage({Key key}) : super(key: key);
 
   @override
   _SignUpPageState createState() => _SignUpPageState();
@@ -26,8 +26,7 @@ class _SignUpPageState extends State<SignUpPage> {
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            size: 18,
-            color: Colors.black,
+            color: kPrimaryColor,
           ),
         ),
       ),
@@ -65,7 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Column(
                 children: <Widget>[
                   Text(
-                    'Đăng kí',
+                    'Đăng ký',
                     style: TextStyle(
                       fontSize: 44.0,
                       fontFamily: 'Lobster',
@@ -77,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
 
               SizedBox(height: 15),
-   
+
               //Email
               Container(
                 margin: EdgeInsets.symmetric(vertical: 5.0),
@@ -113,17 +112,20 @@ class _SignUpPageState extends State<SignUpPage> {
                 minWidth: double.infinity,
                 height: 55,
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => profile_details_page()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => profile_details_page()));
                 },
                 color: kPrimaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: Text(
-                  'Chấp nhận',
+                  'Tiếp tục',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
+                    fontSize: 20,
                     fontWeight: FontWeight.w400,
                   ),
                 ),

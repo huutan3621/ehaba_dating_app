@@ -3,7 +3,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({ Key key }) : super(key: key);
+  const SignInPage({Key key}) : super(key: key);
 
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -25,8 +25,7 @@ class _SignInPageState extends State<SignInPage> {
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            size: 18,
-            color: Colors.black,
+            color: kPrimaryColor,
           ),
         ),
       ),
@@ -75,7 +74,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
 
               SizedBox(height: 20),
-                    
+
               //Email
               Container(
                 margin: EdgeInsets.symmetric(vertical: 5.0),
@@ -99,9 +98,9 @@ class _SignInPageState extends State<SignInPage> {
                 margin: EdgeInsets.symmetric(vertical: 5.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget> [
+                  children: <Widget>[
                     TextButton(
-                      onPressed: (){},
+                      onPressed: () {},
                       child: Text(
                         'Quên mật khẩu?',
                         style: TextStyle(
@@ -130,7 +129,7 @@ class _SignInPageState extends State<SignInPage> {
                   'Chấp nhận',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
+                    fontSize: 20,
                     fontWeight: FontWeight.w400,
                   ),
                 ),

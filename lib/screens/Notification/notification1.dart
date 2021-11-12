@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/constraint.dart';
 
 class Notification1 extends StatefulWidget {
-  const Notification1({ Key key }) : super(key: key);
+  const Notification1({Key key}) : super(key: key);
 
   @override
   _Notification1State createState() => _Notification1State();
@@ -19,47 +19,46 @@ class _Notification1State extends State<Notification1> {
 
       //App Bar
       appBar: AppBar(
-        elevation: 0,
-        brightness: Brightness.light,
-        backgroundColor: Colors.white,
-        toolbarHeight: 60,
-        title: Column(
-          children: <Widget>[
-            Padding(padding: EdgeInsets.fromLTRB(20, 15, 0, 0)),
-            Text(
-              'Thông báo',
-              style: TextStyle(
-              fontSize: 35.0,
-              fontFamily: 'Lobster',
-              fontWeight: FontWeight.normal,
-              color: kPrimaryColor,
-              ),
-            ),
-          ],
-        ),
-        actions: <Widget>[
-          GestureDetector(
-            onTap: (){},
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0.5,
-                  color: Colors.black26,
+          elevation: 0,
+          brightness: Brightness.light,
+          backgroundColor: Colors.white,
+          toolbarHeight: 60,
+          title: Column(
+            children: <Widget>[
+              Padding(padding: EdgeInsets.fromLTRB(20, 15, 0, 0)),
+              Text(
+                'Thông báo',
+                style: TextStyle(
+                  fontSize: 34.0,
+                  fontFamily: 'Lobster',
+                  fontWeight: FontWeight.normal,
+                  color: kPrimaryColor,
                 ),
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.circular(12.0)),
               ),
-              child: IconButton(
-              icon: Icon(Icons.error),
-              color: kPrimaryColor,
-              onPressed: () {},
-            ),
-            ),
-          ) 
-        ]
-      ),
+            ],
+          ),
+          actions: <Widget>[
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                padding: EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 0.5,
+                    color: Colors.black26,
+                  ),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                ),
+                child: IconButton(
+                  icon: Icon(Icons.error),
+                  color: kPrimaryColor,
+                  onPressed: () {},
+                ),
+              ),
+            )
+          ]),
 
       // Thanh navigationBar
       bottomNavigationBar: CustomBottomNavigationBar(
@@ -91,14 +90,13 @@ class _Notification1State extends State<Notification1> {
         defaultSelectedIndex: 1,
       ),
 
-      
       body: SafeArea(
         child: Container(
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Stack(
@@ -107,18 +105,19 @@ class _Notification1State extends State<Notification1> {
                     height: MediaQuery.of(context).size.height / 2.6,
                     width: MediaQuery.of(context).size.height / 3.7,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage('assets/images/avata.png'),
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                      boxShadow: [BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 8.0,
-                        spreadRadius: 2.0,
-                        offset: Offset(0.0, 10.0),
-                      )]
-                    ),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/avata.png'),
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 8.0,
+                            spreadRadius: 2.0,
+                            offset: Offset(0.0, 10.0),
+                          )
+                        ]),
                   ),
                   Positioned(
                     left: 10,
@@ -153,7 +152,7 @@ class _Notification1State extends State<Notification1> {
                   Text(
                     'Lời mời ghép đôi',
                     style: TextStyle(
-                      fontSize: 37.0,
+                      fontSize: 34.0,
                       fontWeight: FontWeight.bold,
                       color: kPrimaryColor,
                     ),
@@ -167,7 +166,7 @@ class _Notification1State extends State<Notification1> {
                 'Hãy bắt đầu trò chuyện để tìm hiểu nhau',
                 style: TextStyle(
                   color: kLightTextColor,
-                  fontSize: 15.0,
+                  fontSize: 14.0,
                 ),
               ),
 
@@ -176,7 +175,7 @@ class _Notification1State extends State<Notification1> {
               //Nút chấp nhận
               MaterialButton(
                 minWidth: double.infinity,
-                height: 55,
+                height: 58,
                 onPressed: () {},
                 color: kPrimaryColor,
                 shape: RoundedRectangleBorder(
@@ -186,21 +185,22 @@ class _Notification1State extends State<Notification1> {
                   'Chấp nhận',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
-                    fontFamily: 'Lato',
+                    fontSize: 20,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
 
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
 
               //Bỏ qua
               MaterialButton(
                 minWidth: double.infinity,
-                height: 55,
+                height: 58,
                 onPressed: () {},
-                color: Color(0xFFffe4e4),
+                color: kSubColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),
@@ -208,8 +208,7 @@ class _Notification1State extends State<Notification1> {
                   'Bỏ qua',
                   style: TextStyle(
                     color: kPrimaryColor,
-                    fontSize: 17,
-                    fontFamily: 'Lato',
+                    fontSize: 20,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -279,7 +278,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                 border: Border(
                   top: BorderSide(width: 4, color: kPrimaryColor),
                 ),
-                )
+              )
             : BoxDecoration(),
         child: Icon(
           icon,
@@ -289,5 +288,3 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     );
   }
 }
-
-
