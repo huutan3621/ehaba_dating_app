@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/SignIn/sign_in_page.dart';
+import 'package:ehaba_dating_app/screens/SignUp/sign_up_page.dart';
 import 'package:ehaba_dating_app/screens/profile_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/responsive.dart';
@@ -71,10 +73,7 @@ class welcome_page extends StatelessWidget {
                     height: 55,
                     color: kPrimaryColor,
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return profile_details_page();
-                      }));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24)),
@@ -92,7 +91,9 @@ class welcome_page extends StatelessWidget {
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 55,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
+                    },
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                       side: BorderSide(color: kPrimaryColor),
