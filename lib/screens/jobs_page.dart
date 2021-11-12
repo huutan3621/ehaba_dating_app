@@ -1,20 +1,19 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
-import 'package:ehaba_dating_app/chips/WrappedMultipleChip.dart';
-import 'package:ehaba_dating_app/screens/jobs_page.dart';
+import 'package:ehaba_dating_app/chips/WrappedMultipleChipB.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'profile_details_page.dart';
+import 'interested_page.dart';
 
-class interested_page extends StatefulWidget {
-  interested_page({Key key}) : super(key: key);
+class jobs_page extends StatefulWidget {
+  jobs_page({Key key}) : super(key: key);
 
   @override
-  _interested_pageState createState() => _interested_pageState();
+  _jobs_pageState createState() => _jobs_pageState();
 }
 
-class _interested_pageState extends State<interested_page> {
+class _jobs_pageState extends State<jobs_page> {
   bool isSelected = false;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class _interested_pageState extends State<interested_page> {
               ),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return profile_details_page(); //back to the previous page
+                  return interested_page(); //back to the previous page
                 }));
               },
             )),
@@ -51,7 +50,7 @@ class _interested_pageState extends State<interested_page> {
                         children: [
                           Column(
                             children: <Widget>[
-                              Text('Sở thích của bạn',
+                              Text('Nghề nghiệp của bạn',
                                   style: TextStyle(
                                     fontFamily: 'Lobster',
                                     fontSize: 34,
@@ -59,7 +58,7 @@ class _interested_pageState extends State<interested_page> {
                                     color: kPrimaryColor,
                                   )),
                               Text(
-                                  'Hãy chọn một vài sở thích\nđể mọi người hiểu về bạn hơn',
+                                  'Hãy chọn một hoặc vài nghề nghiệp\nbạn đang làm để mọi người biết về bạn',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.normal,
@@ -73,7 +72,7 @@ class _interested_pageState extends State<interested_page> {
                       Column(
                         children: <Widget>[
                           //choice chip
-                          WrappedMultipleChip(),
+                          WrappedMultipleChipB(),
                         ],
                       ),
 
@@ -87,7 +86,7 @@ class _interested_pageState extends State<interested_page> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return jobs_page();
+                                return interested_page();
                               }));
                             },
                             shape: RoundedRectangleBorder(

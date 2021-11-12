@@ -94,7 +94,7 @@ class _profile_details_pageState extends State<profile_details_page> {
                                     color: kPrimaryColor,
                                   )),
                               Text(
-                                  'Hãy là chính bạn vì mỗi cá nhân \n đều rất đặc biệt',
+                                  'Hãy là chính bạn vì mỗi cá nhân\nđều rất đặc biệt',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.normal,
