@@ -60,6 +60,7 @@ flutter:
   assets:
     - assets/iconLogo.png
     - assets/tan01.jpg
+    - assets/images/avata.png
 
   fonts:
     - family: Lobster
