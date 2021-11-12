@@ -1,10 +1,11 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/profile_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/responsive.dart';
 
 class welcome_page extends StatelessWidget {
-  const welcome_page({Key? key}) : super(key: key);
+  const welcome_page({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class welcome_page extends StatelessWidget {
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 50),
+          color: Colors.white,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,7 +56,7 @@ class welcome_page extends StatelessWidget {
                     'Ế hả bạn? Vào đây cái là hết ế!',
                     style: TextStyle(
                       color: kLightTextColor,
-                      fontStyle: FontStyle.italic,
+                      fontStyle: FontStyle.normal,
                       fontSize: 24.0,
                     ),
                   ),
@@ -68,14 +70,18 @@ class welcome_page extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 55,
                     color: kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return profile_details_page();
+                      }));
+                    },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24)),
                     child: Text(
                       'Đăng ký',
                       style: TextStyle(
-                        fontSize: 17,
-                        fontFamily: 'Lato',
+                        fontSize: 20,
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),
@@ -96,8 +102,7 @@ class welcome_page extends StatelessWidget {
                       'Đăng nhập',
                       style: TextStyle(
                         color: kPrimaryColor,
-                        fontSize: 17,
-                        fontFamily: 'Lato',
+                        fontSize: 20,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -109,7 +114,6 @@ class welcome_page extends StatelessWidget {
                 'Chính sách và quyền riêng tư',
                 style: TextStyle(
                   color: kPrimaryColor,
-                  fontFamily: 'Lato',
                   fontWeight: FontWeight.normal,
                   fontSize: 15.0,
                 ),
