@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/chips/WrappedMultipleChipB.dart';
+import 'package:ehaba_dating_app/screens/about_me_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -86,7 +87,7 @@ class _jobs_pageState extends State<jobs_page> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return interested_page();
+                                return about_me_page();
                               }));
                             },
                             shape: RoundedRectangleBorder(
