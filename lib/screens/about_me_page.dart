@@ -1,7 +1,9 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/chips/WrappedMultipleChip.dart';
+import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
 import 'package:ehaba_dating_app/screens/jobs_page.dart';
+import 'package:ehaba_dating_app/screens/welcome_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -94,13 +96,13 @@ class _about_me_pageState extends State<about_me_page> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return jobs_page();
+                        return welcome_page();
                       }));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24)),
                     child: Text(
-                      'Tiếp tục',
+                      'Hoàn thành',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,

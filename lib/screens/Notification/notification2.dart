@@ -42,7 +42,7 @@ class _Notification1State extends State<Notification1> {
             GestureDetector(
               onTap: () {},
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
                 padding: EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   border: Border.all(
