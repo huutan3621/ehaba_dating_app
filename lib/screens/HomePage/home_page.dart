@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:ehaba_dating_app/screens/HomePage/match_page.dart';
 import 'package:ehaba_dating_app/screens/SignIn/sign_in_page.dart';
 import 'package:ehaba_dating_app/screens/jobs_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,21 +23,17 @@ class _home_pageState extends State<home_page> {
       backgroundColor: Colors.white,
       appBar: AppBar(
           elevation: 0,
-          brightness: Brightness.light,
           backgroundColor: Colors.white,
           toolbarHeight: 60,
-          title: Column(
-            children: <Widget>[
-              Text(
-                'Trang chủ',
-                style: TextStyle(
-                  fontSize: 34.0,
-                  fontFamily: 'Lobster',
-                  fontWeight: FontWeight.normal,
-                  color: kPrimaryColor,
-                ),
-              ),
-            ],
+          automaticallyImplyLeading: false,
+          title: Text(
+            'Trang chủ',
+            style: TextStyle(
+              fontSize: 34.0,
+              fontFamily: 'Lobster',
+              fontWeight: FontWeight.normal,
+              color: kPrimaryColor,
+            ),
           ),
           actions: <Widget>[
             GestureDetector(
@@ -119,7 +116,7 @@ class _home_pageState extends State<home_page> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return jobs_page();
+                        return match_page();
                       }));
                     },
                     shape: RoundedRectangleBorder(
@@ -165,7 +162,7 @@ class _home_pageState extends State<home_page> {
             // }
           });
         },
-        defaultSelectedIndex: 3,
+        defaultSelectedIndex: 0,
       ),
     );
   }
