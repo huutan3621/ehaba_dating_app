@@ -1,4 +1,6 @@
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
+import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'notification_message.dart';
 
@@ -27,20 +29,25 @@ class _NotificationPageState extends State<NotificationPage> {
           onChange: (val) {
             setState(() {
               _selectedItem = val;
-              // switch (val) {
-              // case 0:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
-              //   break;
-              // case 1:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
-              //   break;
-              // case 2:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
-              //   break;
-              // case 3:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
-              //   break;
-              // }
+              switch (val) {
+                case 0:
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => home_page()));
+                  break;
+                case 1:
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NotificationPage()));
+                  break;
+                // case 2:
+                //   Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
+                //   break;
+                case 3:
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SettingPage()));
+                  break;
+              }
             });
           },
           defaultSelectedIndex: 1,
@@ -52,6 +59,7 @@ class _NotificationPageState extends State<NotificationPage> {
           brightness: Brightness.light,
           backgroundColor: Colors.white,
           toolbarHeight: 60,
+          automaticallyImplyLeading: false,
           title: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.fromLTRB(20, 15, 0, 0)),

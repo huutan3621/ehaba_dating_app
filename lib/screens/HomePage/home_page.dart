@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/screens/HomePage/match_page.dart';
+import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
+import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:ehaba_dating_app/screens/SignIn/sign_in_page.dart';
 import 'package:ehaba_dating_app/screens/jobs_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -146,20 +148,25 @@ class _home_pageState extends State<home_page> {
         onChange: (val) {
           setState(() {
             _selectedItem = val;
-            // switch (val) {
-            // case 0:
-            //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-            //   break;
-            // case 1:
-            //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-            //   break;
-            // case 2:
-            //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-            //   break;
-            // case 3:
-            //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-            //   break;
-            // }
+            switch (val) {
+              case 0:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => home_page()));
+                break;
+              case 1:
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotificationPage()));
+                break;
+              // case 2:
+              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
+              //   break;
+              case 3:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingPage()));
+                break;
+            }
           });
         },
         defaultSelectedIndex: 0,

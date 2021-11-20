@@ -1,4 +1,10 @@
+import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
+import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:tcard/tcard.dart';
+
+import 'home_page.dart';
 
 class match_page extends StatefulWidget {
   @override
@@ -6,47 +12,242 @@ class match_page extends StatefulWidget {
 }
 
 class _match_pageState extends State<match_page> {
-  final List<Color> colors = [
-    Colors.red,
-    Colors.blue,
-    Colors.yellow,
-    Colors.green
-  ];
+  TCardController _controller = TCardController();
+  int _selectedItem = 0;
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-        controller: PageController(viewportFraction: 0.8),
-        scrollDirection: Axis.vertical,
-        itemCount: colors.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(20),
-            child: AnimatedSwitcher(
-              transitionBuilder: (child, animation) {
-                return SlideTransition(
-                    child: child,
-                    position:
-                        Tween<Offset>(begin: Offset(0, 1), end: Offset(0, 0))
-                            .animate(animation));
-              },
-              duration: Duration(milliseconds: 200),
-              child: Dismissible(
-                movementDuration: Duration(milliseconds: 1),
-                resizeDuration: Duration(milliseconds: 1),
-                onDismissed: (direction) {
-                  setState(() {
-                    colors.remove(colors[index]);
-                  });
-                },
-                key: ValueKey(colors[index]),
-                child: Container(
-                  width: (200 + index * 75).toDouble(),
-                  color: colors[index],
+    return Scaffold(
+      //resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          toolbarHeight: 60,
+          automaticallyImplyLeading: false,
+          title: Text(
+            'Trang chủ',
+            style: TextStyle(
+              fontSize: 34.0,
+              fontFamily: 'Lobster',
+              fontWeight: FontWeight.normal,
+              color: kPrimaryColor,
+            ),
+          ),
+          actions: <Widget>[
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+                padding: EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 0.5,
+                    color: Colors.black26,
+                  ),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                ),
+                child: IconButton(
+                  icon: Icon(Icons.error),
+                  color: kPrimaryColor,
+                  onPressed: () {},
                 ),
               ),
-            ),
-          );
+            )
+          ]),
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height,
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TCard(
+                cards: cards,
+                size: Size(360, 480),
+                controller: _controller,
+                onForward: (index, info) {
+                  print(index);
+                },
+                onBack: (index, info) {
+                  print(index);
+                },
+                onEnd: () {
+                  print('end');
+                },
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  OutlineButton(
+                    onPressed: () {
+                      print(_controller);
+                      _controller.back();
+                    },
+                    child: Text('Back'),
+                  ),
+                  OutlineButton(
+                    onPressed: () {
+                      _controller.reset();
+                    },
+                    child: Text('Reset'),
+                  ),
+                  OutlineButton(
+                    onPressed: () {
+                      _controller.forward();
+                    },
+                    child: Text('Forward'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        iconList: [
+          Icons.home,
+          Icons.notifications_active,
+          Icons.message_rounded,
+          Icons.settings
+        ],
+        onChange: (val) {
+          setState(() {
+            _selectedItem = val;
+            switch (val) {
+              case 0:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => home_page()));
+                break;
+              case 1:
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotificationPage()));
+                break;
+              // case 2:
+              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
+              //   break;
+              case 3:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingPage()));
+                break;
+            }
+          });
+        },
+        defaultSelectedIndex: 0,
+      ),
+    );
+  }
+}
+
+//cards
+List<String> images = [
+  'https://media1.popsugar-assets.com/files/thumbor/d4kZB_JE3YdxtnPyVOjJF64ggeo/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2017/11/30/800/n/1922398/169fe2249b4b40fe_GettyImages-468038186/i/Freddie-Highmore-Facts.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/8/89/Chris_Evans_2020_%28cropped%29.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/e/ee/Sebastian_Stan_by_Gage_Skidmore_2_%28cropped%29.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/1200px-Tom_Holland_by_Gage_Skidmore.jpg',
+  'https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_.jpg',
+];
+
+List<Widget> cards = List.generate(
+  images.length,
+  (int index) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16.0),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 17),
+            blurRadius: 23.0,
+            spreadRadius: -13.0,
+            color: Colors.black54,
+          )
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16.0),
+        child: Image.network(
+          images[index],
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  },
+);
+
+//navigation bar
+class CustomBottomNavigationBar extends StatefulWidget {
+  final int defaultSelectedIndex;
+  final Function(int) onChange;
+  final List<IconData> iconList;
+
+  CustomBottomNavigationBar(
+      {this.defaultSelectedIndex = 0,
+      @required this.iconList,
+      @required this.onChange});
+
+  @override
+  _CustomBottomNavigationBarState createState() =>
+      _CustomBottomNavigationBarState();
+}
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  int _selectedIndex = 0;
+  List<IconData> _iconList = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _selectedIndex = widget.defaultSelectedIndex;
+    _iconList = widget.iconList;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> _navBarItemList = [];
+
+    for (var i = 0; i < _iconList.length; i++) {
+      _navBarItemList.add(buildNavBarItem(_iconList[i], i));
+    }
+
+    return Row(
+      children: _navBarItemList,
+    );
+  }
+
+  Widget buildNavBarItem(IconData icon, int index) {
+    return GestureDetector(
+      onTap: () {
+        widget.onChange(index);
+        setState(() {
+          _selectedIndex = index;
         });
+      },
+      child: Container(
+        height: 60,
+        width: MediaQuery.of(context).size.width / _iconList.length,
+        decoration: index == _selectedIndex
+            ? BoxDecoration(
+                border: Border(
+                  top: BorderSide(width: 4, color: kPrimaryColor),
+                ),
+              )
+            : BoxDecoration(),
+        child: Icon(
+          icon,
+          color: index == _selectedIndex ? Color(0xFFD94343) : Colors.grey,
+        ),
+      ),
+    );
   }
 }

@@ -1,4 +1,7 @@
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
+import 'package:ehaba_dating_app/screens/Notification/notification_message.dart';
+import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatefulWidget {
@@ -26,20 +29,25 @@ class _SettingPageState extends State<SettingPage> {
           onChange: (val) {
             setState(() {
               _selectedItem = val;
-              // switch (val) {
-              // case 0:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-              //   break;
-              // case 1:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-              //   break;
-              // case 2:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-              //   break;
-              // case 3:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-              //   break;
-              // }
+              switch (val) {
+                case 0:
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => home_page()));
+                  break;
+                case 1:
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NotificationPage()));
+                  break;
+                // case 2:
+                //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
+                //   break;
+                case 3:
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SettingPage()));
+                  break;
+              }
             });
           },
           defaultSelectedIndex: 3,
@@ -82,7 +90,7 @@ class _SettingPageState extends State<SettingPage> {
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: AssetImage('assets/iconLogo.png'),
+                          image: AssetImage('assets/images/avata.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
