@@ -14,8 +14,6 @@ class match_page extends StatefulWidget {
 class _match_pageState extends State<match_page> {
   //card controller
   TCardController _controller = TCardController();
-  //nav bar
-  int _selectedItem = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -112,40 +110,6 @@ class _match_pageState extends State<match_page> {
             ],
           ),
         ),
-      ),
-      //navigation bar here
-      bottomNavigationBar: CustomBottomNavigationBar(
-        iconList: [
-          Icons.home,
-          Icons.notifications_active,
-          Icons.message_rounded,
-          Icons.settings
-        ],
-        onChange: (val) {
-          setState(() {
-            _selectedItem = val;
-            switch (val) {
-              case 0:
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => home_page()));
-                break;
-              case 1:
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NotificationPage()));
-                break;
-              // case 2:
-              //   Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
-              //   break;
-              case 3:
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SettingPage()));
-                break;
-            }
-          });
-        },
-        defaultSelectedIndex: 0,
       ),
     );
   }
