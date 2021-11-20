@@ -72,7 +72,7 @@ class _interested_pageState extends State<interested_page> {
 
                       Column(
                         children: <Widget>[
-                          //choice chip
+                          //choice chip A
                           WrappedMultipleChip(),
                         ],
                       ),

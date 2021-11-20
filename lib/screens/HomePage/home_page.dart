@@ -37,6 +37,7 @@ class _home_pageState extends State<home_page> {
               color: kPrimaryColor,
             ),
           ),
+          //filter button
           actions: <Widget>[
             GestureDetector(
               onTap: () {},
@@ -52,7 +53,7 @@ class _home_pageState extends State<home_page> {
                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.error),
+                  icon: Icon(Icons.sort_rounded),
                   color: kPrimaryColor,
                   onPressed: () {},
                 ),
@@ -69,6 +70,7 @@ class _home_pageState extends State<home_page> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              //icon logo
               Container(
                 height: MediaQuery.of(context).size.height / 3,
                 width: MediaQuery.of(context).size.height / 3,
@@ -90,6 +92,7 @@ class _home_pageState extends State<home_page> {
                   ],
                 ),
               ),
+              //2 lines of text
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -109,6 +112,7 @@ class _home_pageState extends State<home_page> {
                       )),
                 ],
               ),
+              //start bbutton
               Column(
                 children: <Widget>[
                   MaterialButton(
@@ -138,6 +142,7 @@ class _home_pageState extends State<home_page> {
           ),
         ),
       ),
+      //nav bar here
       bottomNavigationBar: CustomBottomNavigationBar(
         iconList: [
           Icons.home,
@@ -175,6 +180,7 @@ class _home_pageState extends State<home_page> {
   }
 }
 
+//nav bar
 class CustomBottomNavigationBar extends StatefulWidget {
   final int defaultSelectedIndex;
   final Function(int) onChange;

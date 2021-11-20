@@ -19,6 +19,7 @@ class _jobs_pageState extends State<jobs_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //app bar
         appBar: AppBar(
             //hide header shadow
             backgroundColor: Colors.white,
@@ -49,6 +50,7 @@ class _jobs_pageState extends State<jobs_page> {
                       Row(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          //2 text lines
                           Column(
                             children: <Widget>[
                               Text('Nghề nghiệp của bạn',
@@ -70,6 +72,7 @@ class _jobs_pageState extends State<jobs_page> {
                         ],
                       ),
 
+                      //chips choie B
                       Column(
                         children: <Widget>[
                           //choice chip

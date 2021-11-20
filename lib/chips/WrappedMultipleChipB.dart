@@ -44,6 +44,7 @@ class _WrappedMultipleChipStateB extends State<WrappedMultipleChipB> {
     'Đạo diễn',
   ];
 
+  //how chips interact on the screen
   @override
   Widget build(BuildContext context) {
     return ChipsChoice.multiple(
@@ -54,6 +55,7 @@ class _WrappedMultipleChipStateB extends State<WrappedMultipleChipB> {
         value: (i, v) => v,
         label: (i, v) => v,
       ),
+      //chips decoration
       wrapped: true,
       choiceStyle: C2ChoiceStyle(
         color: Colors.grey,

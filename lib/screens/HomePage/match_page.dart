@@ -12,7 +12,9 @@ class match_page extends StatefulWidget {
 }
 
 class _match_pageState extends State<match_page> {
+  //card controller
   TCardController _controller = TCardController();
+  //nav bar
   int _selectedItem = 0;
 
   @override
@@ -49,7 +51,7 @@ class _match_pageState extends State<match_page> {
                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.error),
+                  icon: Icon(Icons.error_rounded),
                   color: kPrimaryColor,
                   onPressed: () {},
                 ),
@@ -62,6 +64,7 @@ class _match_pageState extends State<match_page> {
           height: MediaQuery.of(context).size.height,
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           color: Colors.white,
+          //swipe card here
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -110,6 +113,7 @@ class _match_pageState extends State<match_page> {
           ),
         ),
       ),
+      //navigation bar here
       bottomNavigationBar: CustomBottomNavigationBar(
         iconList: [
           Icons.home,
@@ -147,7 +151,7 @@ class _match_pageState extends State<match_page> {
   }
 }
 
-//cards
+//cards details
 List<String> images = [
   'https://media1.popsugar-assets.com/files/thumbor/d4kZB_JE3YdxtnPyVOjJF64ggeo/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2017/11/30/800/n/1922398/169fe2249b4b40fe_GettyImages-468038186/i/Freddie-Highmore-Facts.jpg',
   'https://upload.wikimedia.org/wikipedia/commons/8/89/Chris_Evans_2020_%28cropped%29.jpg',
@@ -156,6 +160,7 @@ List<String> images = [
   'https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_.jpg',
 ];
 
+//card decoration
 List<Widget> cards = List.generate(
   images.length,
   (int index) {
