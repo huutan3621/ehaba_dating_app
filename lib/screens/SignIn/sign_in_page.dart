@@ -1,3 +1,4 @@
+import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
@@ -120,7 +121,11 @@ class _SignInPageState extends State<SignInPage> {
               MaterialButton(
                 minWidth: double.infinity,
                 height: 55,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return home_page();
+                  }));
+                },
                 color: kPrimaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),

@@ -273,7 +273,6 @@ class _profile_details_pageState extends State<profile_details_page> {
                           ),
 
                           //calendar
-
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[

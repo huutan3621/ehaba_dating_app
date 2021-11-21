@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/chips/WrappedMultipleChipB.dart';
+import 'package:ehaba_dating_app/screens/about_me_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -18,6 +19,7 @@ class _jobs_pageState extends State<jobs_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //app bar
         appBar: AppBar(
             //hide header shadow
             backgroundColor: Colors.white,
@@ -48,6 +50,7 @@ class _jobs_pageState extends State<jobs_page> {
                       Row(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          //2 text lines
                           Column(
                             children: <Widget>[
                               Text('Nghề nghiệp của bạn',
@@ -69,6 +72,7 @@ class _jobs_pageState extends State<jobs_page> {
                         ],
                       ),
 
+                      //chips choie B
                       Column(
                         children: <Widget>[
                           //choice chip
@@ -86,7 +90,7 @@ class _jobs_pageState extends State<jobs_page> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return interested_page();
+                                return about_me_page();
                               }));
                             },
                             shape: RoundedRectangleBorder(
