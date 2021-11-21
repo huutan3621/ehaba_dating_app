@@ -91,11 +91,13 @@ class _match_pageState extends State<match_page> {
                     onPressed: () {
                       _controller.forward();
                     },
-                    color: kSubColor,
+                    color: Colors.white,
                     textColor: kPrimaryColor,
                     child: Icon(Icons.close_rounded, size: 24),
                     padding: EdgeInsets.all(16),
-                    shape: CircleBorder(),
+                    shape: CircleBorder(
+                      side: BorderSide(color: kPrimaryColor),
+                    ),
                   ),
                   //refresh button
                   MaterialButton(
@@ -106,7 +108,10 @@ class _match_pageState extends State<match_page> {
                     textColor: Colors.green.shade500,
                     child: Icon(Icons.refresh_rounded, size: 24),
                     padding: EdgeInsets.all(16),
-                    shape: CircleBorder(),
+                    shape: CircleBorder(
+                        side: BorderSide(
+                      color: Colors.green.shade500,
+                    )),
                   ),
                   //check button
                   MaterialButton(
@@ -115,7 +120,7 @@ class _match_pageState extends State<match_page> {
                     textColor: kSubColor,
                     child: Icon(Icons.check_rounded, size: 24),
                     padding: EdgeInsets.all(16),
-                    shape: CircleBorder(),
+                    shape: CircleBorder(side: BorderSide(color: Colors.white)),
                   ),
                 ],
               ),
