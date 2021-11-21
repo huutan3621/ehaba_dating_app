@@ -8,3 +8,5 @@ double getScreenPropotionHeight(double actualWeight, Size size) {
 double getScreenPropotionWitdh(double actualWitdh, Size size) {
   return (actualWitdh / 375.0) * size.width;
 }
+
+const kDefaultPadding = 20.0;

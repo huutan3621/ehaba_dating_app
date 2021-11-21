@@ -110,8 +110,8 @@ class _SettingPageState extends State<SettingPage> {
                     "Thêm",
                     style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black26),
                   ),
                 ],
               ),
