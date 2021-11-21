@@ -100,19 +100,19 @@ class _match_pageState extends State<match_page> {
                     ),
                   ),
                   //refresh button
-                  MaterialButton(
-                    onPressed: () {
-                      _controller.reset();
-                    },
-                    color: Colors.grey.shade100,
-                    textColor: Colors.green.shade500,
-                    child: Icon(Icons.refresh_rounded, size: 24),
-                    padding: EdgeInsets.all(16),
-                    shape: CircleBorder(
-                        side: BorderSide(
-                      color: Colors.green.shade500,
-                    )),
-                  ),
+                  //MaterialButton(
+                  //onPressed: () {
+                  //_controller.reset();
+                  //},
+                  //color: Colors.grey.shade100,
+                  //textColor: Colors.green.shade500,
+                  //child: Icon(Icons.refresh_rounded, size: 24),
+                  //padding: EdgeInsets.all(16),
+                  //shape: CircleBorder(
+                  //side: BorderSide(
+                  //color: Colors.green.shade500,
+                  //)),
+                  //),
                   //check button
                   MaterialButton(
                     onPressed: () {},
@@ -120,7 +120,7 @@ class _match_pageState extends State<match_page> {
                     textColor: kSubColor,
                     child: Icon(Icons.check_rounded, size: 24),
                     padding: EdgeInsets.all(16),
-                    shape: CircleBorder(side: BorderSide(color: Colors.white)),
+                    shape: CircleBorder(),
                   ),
                 ],
               ),
@@ -232,7 +232,7 @@ List<Widget> cards = List.generate(
                             shadows: [
                               Shadow(
                                 blurRadius: 10.0,
-                                color: Colors.white38,
+                                color: Colors.grey.shade300,
                                 offset: Offset(1.0, 1.0),
                               ),
                             ],
