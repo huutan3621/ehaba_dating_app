@@ -91,36 +91,36 @@ class _match_pageState extends State<match_page> {
                     onPressed: () {
                       _controller.forward();
                     },
-                    color: Colors.white,
+                    color: kSubColor,
                     textColor: kPrimaryColor,
                     child: Icon(Icons.close_rounded, size: 24),
                     padding: EdgeInsets.all(16),
                     shape: CircleBorder(
-                      side: BorderSide(color: kPrimaryColor),
-                    ),
+                        //side: BorderSide(color: kSubColor),
+                        ),
                   ),
                   //refresh button
-                  //MaterialButton(
-                  //onPressed: () {
-                  //_controller.reset();
-                  //},
-                  //color: Colors.grey.shade100,
-                  //textColor: Colors.green.shade500,
-                  //child: Icon(Icons.refresh_rounded, size: 24),
-                  //padding: EdgeInsets.all(16),
-                  //shape: CircleBorder(
-                  //side: BorderSide(
-                  //color: Colors.green.shade500,
-                  //)),
-                  //),
+                  MaterialButton(
+                    onPressed: () {
+                      _controller.reset();
+                    },
+                    color: Colors.green.shade400,
+                    textColor: Colors.white,
+                    child: Icon(Icons.refresh_rounded, size: 24),
+                    padding: EdgeInsets.all(16),
+                    shape: CircleBorder(
+                        //side: BorderSide(color: Colors.green.shade500,)
+                        ),
+                  ),
                   //check button
                   MaterialButton(
                     onPressed: () {},
                     color: kPrimaryColor,
-                    textColor: kSubColor,
+                    textColor: Colors.white,
                     child: Icon(Icons.check_rounded, size: 24),
                     padding: EdgeInsets.all(16),
-                    shape: CircleBorder(),
+                    shape: CircleBorder(//side: BorderSide(color: kPrimaryColor)
+                        ),
                   ),
                 ],
               ),
