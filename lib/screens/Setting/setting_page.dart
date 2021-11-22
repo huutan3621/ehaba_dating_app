@@ -3,6 +3,7 @@ import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
 import 'package:ehaba_dating_app/screens/Notification/notification_message.dart';
 import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class SettingPage extends StatefulWidget {
   @override
@@ -142,8 +143,8 @@ class _SettingPageState extends State<SettingPage> {
               ),
             ),
             Icon(
-              Icons.arrow_forward_ios,
-              size: 18.0,
+              Ionicons.chevron_forward,
+              size: 24.0,
               color: kPrimaryColor,
             ),
           ],

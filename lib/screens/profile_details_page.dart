@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/responsive.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ionicons/ionicons.dart';
 
 class profile_details_page extends StatefulWidget {
   profile_details_page({Key key}) : super(key: key);
@@ -62,8 +63,9 @@ class _profile_details_pageState extends State<profile_details_page> {
             leading: IconButton(
               //back button
               icon: Icon(
-                Icons.arrow_back_ios,
+                Ionicons.chevron_back,
                 color: kPrimaryColor,
+                size: 24,
               ),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -119,14 +121,15 @@ class _profile_details_pageState extends State<profile_details_page> {
                                 Align(
                                   alignment: Alignment.bottomRight,
                                   child: CircleAvatar(
-                                    radius: 20,
+                                    radius: 18,
                                     backgroundColor: Colors.white,
                                     child: CircleAvatar(
                                         radius: 18,
                                         backgroundColor: kSubColor,
                                         child: Icon(
-                                          Icons.photo_camera_rounded,
+                                          Ionicons.camera,
                                           color: kPrimaryColor,
+                                          size: 24,
                                         )),
                                   ),
                                 ),
@@ -287,8 +290,9 @@ class _profile_details_pageState extends State<profile_details_page> {
                                   child: Row(
                                     children: <Widget>[
                                       Icon(
-                                        Icons.calendar_today_rounded,
+                                        Ionicons.calendar,
                                         color: kPrimaryColor,
+                                        size: 24,
                                       ),
                                       SizedBox(width: 14.0),
                                       Text(
@@ -324,7 +328,7 @@ class _profile_details_pageState extends State<profile_details_page> {
                               'Tiếp tục',
                               style: TextStyle(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),

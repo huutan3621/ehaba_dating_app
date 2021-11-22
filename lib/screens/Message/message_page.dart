@@ -2,6 +2,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/screens/Message/data.dart';
 import 'package:ehaba_dating_app/screens/profile_details_page.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 import 'Chat/chat_page.dart';
 
@@ -24,6 +25,7 @@ class _MessagePageState extends State<MessagePage> {
           brightness: Brightness.light,
           backgroundColor: Colors.white,
           toolbarHeight: 60,
+          automaticallyImplyLeading: false,
           title: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.fromLTRB(20, 15, 0, 0)),
@@ -42,7 +44,7 @@ class _MessagePageState extends State<MessagePage> {
             GestureDetector(
               onTap: () {},
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                margin: EdgeInsets.symmetric(horizontal: 14, vertical: 2),
                 padding: EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -53,7 +55,7 @@ class _MessagePageState extends State<MessagePage> {
                   borderRadius: BorderRadius.all(Radius.circular(12.0)),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.sort_rounded),
+                  icon: Icon(Ionicons.filter),
                   color: kPrimaryColor,
                   onPressed: () {},
                 ),

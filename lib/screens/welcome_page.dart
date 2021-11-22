@@ -73,7 +73,10 @@ class welcome_page extends StatelessWidget {
                     height: 55,
                     color: kPrimaryColor,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignUpPage()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24)),
@@ -81,7 +84,7 @@ class welcome_page extends StatelessWidget {
                       'Đăng ký',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
@@ -92,7 +95,10 @@ class welcome_page extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 55,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignInPage()));
                     },
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -102,10 +108,9 @@ class welcome_page extends StatelessWidget {
                     child: Text(
                       'Đăng nhập',
                       style: TextStyle(
-                        color: kPrimaryColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
+                          color: kPrimaryColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],

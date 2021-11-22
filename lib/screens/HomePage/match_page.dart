@@ -1,7 +1,6 @@
 import 'package:ehaba_dating_app/constraint.dart';
-import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
-import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:tcard/tcard.dart';
 
 import 'home_page.dart';
@@ -49,7 +48,7 @@ class _match_pageState extends State<match_page> {
                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.error_rounded),
+                  icon: Icon(Ionicons.alert_circle),
                   color: kPrimaryColor,
                   onPressed: () {},
                 ),
@@ -93,7 +92,7 @@ class _match_pageState extends State<match_page> {
                     },
                     color: kSubColor,
                     textColor: kPrimaryColor,
-                    child: Icon(Icons.close_rounded, size: 24),
+                    child: Icon(Ionicons.close, size: 24),
                     padding: EdgeInsets.all(16),
                     shape: CircleBorder(
                         //side: BorderSide(color: kSubColor),
@@ -106,7 +105,7 @@ class _match_pageState extends State<match_page> {
                     },
                     color: Colors.green.shade400,
                     textColor: Colors.white,
-                    child: Icon(Icons.refresh_rounded, size: 24),
+                    child: Icon(Ionicons.refresh, size: 24),
                     padding: EdgeInsets.all(16),
                     shape: CircleBorder(
                         //side: BorderSide(color: Colors.green.shade500,)
@@ -117,7 +116,7 @@ class _match_pageState extends State<match_page> {
                     onPressed: () {},
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    child: Icon(Icons.check_rounded, size: 24),
+                    child: Icon(Ionicons.checkmark, size: 24),
                     padding: EdgeInsets.all(16),
                     shape: CircleBorder(//side: BorderSide(color: kPrimaryColor)
                         ),

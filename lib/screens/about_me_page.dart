@@ -7,6 +7,7 @@ import 'package:ehaba_dating_app/screens/welcome_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ionicons/ionicons.dart';
 import 'profile_details_page.dart';
 
 class about_me_page extends StatefulWidget {
@@ -28,8 +29,9 @@ class _about_me_pageState extends State<about_me_page> {
           leading: IconButton(
             //back button
             icon: Icon(
-              Icons.arrow_back_ios,
+              Ionicons.chevron_back,
               color: kPrimaryColor,
+              size: 24,
             ),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -105,7 +107,7 @@ class _about_me_pageState extends State<about_me_page> {
                       'Hoàn thành',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),

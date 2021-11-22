@@ -5,6 +5,7 @@ import 'package:ehaba_dating_app/screens/about_me_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ionicons/ionicons.dart';
 import 'interested_page.dart';
 
 class jobs_page extends StatefulWidget {
@@ -28,8 +29,9 @@ class _jobs_pageState extends State<jobs_page> {
             leading: IconButton(
               //back button
               icon: Icon(
-                Icons.arrow_back_ios,
+                Ionicons.chevron_back,
                 color: kPrimaryColor,
+                size: 24,
               ),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -99,7 +101,7 @@ class _jobs_pageState extends State<jobs_page> {
                               'Tiếp tục',
                               style: TextStyle(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),

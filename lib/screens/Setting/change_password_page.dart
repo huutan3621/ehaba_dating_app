@@ -4,14 +4,14 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 import 'package:ionicons/ionicons.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key key}) : super(key: key);
+class ChangePasswordPage extends StatefulWidget {
+  const ChangePasswordPage({Key key}) : super(key: key);
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _ChangePasswordPageState createState() => _ChangePasswordPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _ChangePasswordPageState extends State<ChangePasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Column(
                 children: <Widget>[
                   Text(
-                    'Đăng ký',
+                    'Đổi mật khẩu',
                     style: TextStyle(
                       fontSize: 44.0,
                       fontFamily: 'Lobster',

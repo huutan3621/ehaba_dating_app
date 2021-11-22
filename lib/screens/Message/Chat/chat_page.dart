@@ -1,7 +1,7 @@
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/screens/Message/data.dart';
 import 'package:flutter/material.dart';
-
+import 'package:ionicons/ionicons.dart';
 
 class ChatDetailPage extends StatefulWidget {
   @override
@@ -22,8 +22,9 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
               Navigator.pop(context);
             },
             child: Icon(
-              Icons.arrow_back_ios,
+              Ionicons.chevron_back,
               color: kPrimaryColor,
+              size: 24.0,
             )),
         title: Row(
           children: <Widget>[
@@ -31,25 +32,23 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
               width: 40,
               height: 40,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage('assets/tan01.jpg'),
-                  fit: BoxFit.cover
-                )
-              ),
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: AssetImage('assets/tan01.jpg'),
+                      fit: BoxFit.cover)),
             ),
             SizedBox(
               width: 15,
             ),
-
-
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   "Tân Võ",
                   style: TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
                 SizedBox(
                   height: 3,
@@ -62,12 +61,11 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
             )
           ],
         ),
-
         actions: <Widget>[
           Icon(
-            Icons.phone,
+            Ionicons.call,
             color: kPrimaryColor,
-            size: 32,
+            size: 24,
           ),
           SizedBox(
             width: 10,
@@ -81,56 +79,64 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   }
 
   //Thanh bottom
-  Widget getBottom(){
+  Widget getBottom() {
     return Container(
       height: 70,
       width: double.infinity,
-      decoration: BoxDecoration(
-        color: kSubColor
-      ),
+      decoration: BoxDecoration(color: kSubColor),
       child: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20,bottom: 10),
+        padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-
             //Photo
             Row(
-                children: <Widget>[
-                  Icon(Icons.photo,size: 35,color: kPrimaryColor,),
-                  SizedBox(width: 15,),
-                ],
-              ),
+              children: <Widget>[
+                Icon(
+                  Ionicons.images,
+                  size: 24,
+                  color: kPrimaryColor,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+              ],
+            ),
 
             //Keyboard
             Container(
-              width: (MediaQuery.of(context).size.width - 100),
+              width: (MediaQuery.of(context).size.width - 80),
               child: Row(
-              children: <Widget>[
-                Container(
-                  width: (MediaQuery.of(context).size.width - 150),
-                  height: 45,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(24)
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 12),
-                    child: TextField(
-                      cursorColor: Colors.black,
-                      controller: _sendMessageController,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Tin nhắn",
+                children: <Widget>[
+                  Container(
+                    width: (MediaQuery.of(context).size.width - 120),
+                    height: 45,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(24)),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: TextField(
+                        cursorColor: Colors.black,
+                        controller: _sendMessageController,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Tin nhắn",
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(width: 15,),
-                Icon(Icons.favorite,size: 35,color: kPrimaryColor,),
-              ],
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Icon(
+                    Ionicons.send,
+                    size: 24,
+                    color: kPrimaryColor,
+                  ),
+                ],
+              ),
             ),
-            ), 
           ],
         ),
       ),
@@ -138,11 +144,13 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   }
 
   Widget getBody() {
-    
     return ListView(
-      padding: EdgeInsets.only(right: 20,left: 20,top: 20,bottom: 80),
-      children: List.generate(messages.length, (index){
-        return ChatBubble(isMe: messages[index]['isMe'],messageType: messages[index]['messageType'],message: messages[index]['message']);
+      padding: EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 80),
+      children: List.generate(messages.length, (index) {
+        return ChatBubble(
+            isMe: messages[index]['isMe'],
+            messageType: messages[index]['messageType'],
+            message: messages[index]['message']);
       }),
     );
   }
@@ -154,12 +162,16 @@ class ChatBubble extends StatelessWidget {
   final String message;
   final int messageType;
   const ChatBubble({
-    Key key, this.isMe, this.profileImg, this.message, this.messageType,
+    Key key,
+    this.isMe,
+    this.profileImg,
+    this.message,
+    this.messageType,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if(isMe){
+    if (isMe) {
       return Padding(
         padding: const EdgeInsets.all(1.0),
         child: Row(
@@ -168,17 +180,13 @@ class ChatBubble extends StatelessWidget {
             Flexible(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.2),
-                  borderRadius: getMessageType(messageType) 
-                ),
+                    color: Colors.grey.withOpacity(0.2),
+                    borderRadius: getMessageType(messageType)),
                 child: Padding(
                   padding: const EdgeInsets.all(13.0),
                   child: Text(
                     message,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 17
-                    ),
+                    style: TextStyle(color: Colors.black, fontSize: 17),
                   ),
                 ),
               ),
@@ -186,26 +194,22 @@ class ChatBubble extends StatelessWidget {
           ],
         ),
       );
-    }else{
+    } else {
       return Padding(
-        padding:  EdgeInsets.all(1.0),
+        padding: EdgeInsets.all(1.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Flexible(
               child: Container(
                 decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: getMessageType(messageType) 
-                ),
+                    color: kPrimaryColor,
+                    borderRadius: getMessageType(messageType)),
                 child: Padding(
                   padding: const EdgeInsets.all(13.0),
                   child: Text(
                     message,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17
-                    ),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                 ),
               ),
@@ -214,75 +218,69 @@ class ChatBubble extends StatelessWidget {
         ),
       );
     }
-    
   }
-  getMessageType(messageType){
-    if(isMe){
+
+  getMessageType(messageType) {
+    if (isMe) {
       // start message
-      if(messageType == 1){
+      if (messageType == 1) {
         return BorderRadius.only(
-          topRight: Radius.circular(30),
-          bottomRight: Radius.circular(5),
-          topLeft: Radius.circular(30),
-          bottomLeft: Radius.circular(30)
-        );
+            topRight: Radius.circular(30),
+            bottomRight: Radius.circular(5),
+            topLeft: Radius.circular(30),
+            bottomLeft: Radius.circular(30));
       }
       // middle message
-      else if(messageType == 2){
+      else if (messageType == 2) {
         return BorderRadius.only(
-          topRight: Radius.circular(5),
-          bottomRight: Radius.circular(5),
-          topLeft: Radius.circular(30),
-          bottomLeft: Radius.circular(30)
-        );
+            topRight: Radius.circular(5),
+            bottomRight: Radius.circular(5),
+            topLeft: Radius.circular(30),
+            bottomLeft: Radius.circular(30));
       }
       // end message
-      else if(messageType == 3){
+      else if (messageType == 3) {
         return BorderRadius.only(
-          topRight: Radius.circular(5),
-          bottomRight: Radius.circular(30),
-          topLeft: Radius.circular(30),
-          bottomLeft: Radius.circular(30)
-        );
+            topRight: Radius.circular(5),
+            bottomRight: Radius.circular(30),
+            topLeft: Radius.circular(30),
+            bottomLeft: Radius.circular(30));
       }
       // standalone message
-      else{
+      else {
         return BorderRadius.all(Radius.circular(30));
       }
     }
     // for sender bubble
-    else{
+    else {
       // start message
-        if(messageType == 1){
-          return BorderRadius.only(
+      if (messageType == 1) {
+        return BorderRadius.only(
             topLeft: Radius.circular(30),
             bottomLeft: Radius.circular(5),
             topRight: Radius.circular(30),
-            bottomRight: Radius.circular(30)
-          );
-        }
-        // middle message
-        else if(messageType == 2){
-          return BorderRadius.only(
+            bottomRight: Radius.circular(30));
+      }
+      // middle message
+      else if (messageType == 2) {
+        return BorderRadius.only(
             topLeft: Radius.circular(5),
             bottomLeft: Radius.circular(5),
             topRight: Radius.circular(30),
-            bottomRight: Radius.circular(30)
-          );
-        }
-        // end message
-        else if(messageType == 3){
-          return BorderRadius.only(
+            bottomRight: Radius.circular(30));
+      }
+      // end message
+      else if (messageType == 3) {
+        return BorderRadius.only(
             topLeft: Radius.circular(5),
             bottomLeft: Radius.circular(30),
             topRight: Radius.circular(30),
-            bottomRight: Radius.circular(30)
-          );
-        }
-        // standalone message
-        else{
-          return BorderRadius.all(Radius.circular(30));
-        }
+            bottomRight: Radius.circular(30));
+      }
+      // standalone message
+      else {
+        return BorderRadius.all(Radius.circular(30));
+      }
     }
   }
 }

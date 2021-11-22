@@ -1,11 +1,10 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/screens/HomePage/match_page.dart';
-import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
-import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ionicons/ionicons.dart';
 
 class home_page extends StatefulWidget {
   home_page({Key key}) : super(key: key);
@@ -50,7 +49,7 @@ class _home_pageState extends State<home_page> {
                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.sort_rounded),
+                  icon: Icon(Ionicons.filter),
                   color: kPrimaryColor,
                   onPressed: () {},
                 ),
@@ -128,7 +127,7 @@ class _home_pageState extends State<home_page> {
                       'Bắt đầu',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),

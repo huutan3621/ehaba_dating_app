@@ -1,7 +1,9 @@
+import 'package:ehaba_dating_app/components/navigation_bar.dart';
 import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
+import 'package:ionicons/ionicons.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key key}) : super(key: key);
@@ -25,8 +27,9 @@ class _SignInPageState extends State<SignInPage> {
             Navigator.pop(context);
           },
           icon: Icon(
-            Icons.arrow_back_ios,
+            Ionicons.chevron_back,
             color: kPrimaryColor,
+            size: 24,
           ),
         ),
       ),
@@ -123,7 +126,7 @@ class _SignInPageState extends State<SignInPage> {
                 height: 55,
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return home_page();
+                    return NavigationBar();
                   }));
                 },
                 color: kPrimaryColor,
@@ -135,7 +138,7 @@ class _SignInPageState extends State<SignInPage> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

@@ -5,8 +5,7 @@ import 'package:ehaba_dating_app/screens/Message/message_page.dart';
 import 'package:ehaba_dating_app/screens/Notification/notification_page.dart';
 import 'package:ehaba_dating_app/screens/Setting/setting_page.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:ionicons/ionicons.dart';
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -73,29 +72,41 @@ class _NavigationBarState extends State<NavigationBar> {
       }),
       items: <BottomNavyBarItem>[
         BottomNavyBarItem(
-          icon: Icon(Icons.home),
-          title: Text(' Trang chủ'),
+          icon: Icon(Ionicons.home),
+          title: Text('Trang chủ',
+              style: TextStyle(
+                fontSize: 15.5,
+              )),
           textAlign: TextAlign.center,
           activeColor: kPrimaryColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.notifications_active,),
-          title: Text('Thông báo'),
+          icon: Icon(Ionicons.notifications),
+          title: Text('Thông báo',
+              style: TextStyle(
+                fontSize: 15.5,
+              )),
           textAlign: TextAlign.center,
           activeColor: kPrimaryColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.message_rounded,),
-          title: Text('Tin nhắn'),
+          icon: Icon(Ionicons.chatbubble),
+          title: Text('Tin nhắn',
+              style: TextStyle(
+                fontSize: 15.5,
+              )),
           textAlign: TextAlign.center,
           activeColor: kPrimaryColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.settings,),
-          title: Text('Cài đặt'),
+          icon: Icon(Ionicons.settings),
+          title: Text('Cài đặt',
+              style: TextStyle(
+                fontSize: 15.5,
+              )),
           textAlign: TextAlign.center,
           activeColor: kPrimaryColor,
           inactiveColor: Colors.grey,
