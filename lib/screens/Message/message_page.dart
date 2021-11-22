@@ -121,14 +121,14 @@ class _MessagePageState extends State<MessagePage> {
                                       Text(
                                         userMessages[index]['name'],
                                         style: TextStyle(
-                                            fontSize: 15,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
                                   ),
                                   Text(userMessages[index]['created_at'],
                                       style: TextStyle(
-                                        fontSize: 11,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w300,
                                         color: Colors.black54,
                                       ))
@@ -143,7 +143,7 @@ class _MessagePageState extends State<MessagePage> {
                                       child: Text(
                                         userMessages[index]['message'],
                                         style: TextStyle(
-                                            fontSize: 15, color: kPrimaryColor),
+                                            fontSize: 14, color: kPrimaryColor),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     )
@@ -152,7 +152,7 @@ class _MessagePageState extends State<MessagePage> {
                                       child: Text(
                                         userMessages[index]['message'],
                                         style: TextStyle(
-                                            fontSize: 15,
+                                            fontSize: 14,
                                             color:
                                                 Colors.black.withOpacity(0.8)),
                                         overflow: TextOverflow.ellipsis,

@@ -76,7 +76,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                     Text(
                                       chat.sender.name,
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -85,7 +85,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 Text(
                                   chat.time,
                                   style: TextStyle(
-                                    fontSize: 11,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w300,
                                     color: Colors.black54,
                                   ),
@@ -101,9 +101,9 @@ class _NotificationPageState extends State<NotificationPage> {
                                 chat.text,
                                 style: chat.unread
                                     ? TextStyle(
-                                        fontSize: 13, color: kPrimaryColor)
+                                        fontSize: 14, color: kPrimaryColor)
                                     : TextStyle(
-                                        fontSize: 13,
+                                        fontSize: 14,
                                         color: Colors.black54,
                                       ),
                                 overflow: TextOverflow.ellipsis,
