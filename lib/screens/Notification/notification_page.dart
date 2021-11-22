@@ -54,13 +54,13 @@ class _NotificationPageState extends State<NotificationPage> {
                       Container(
                         padding: EdgeInsets.all(2),
                         child: CircleAvatar(
-                          radius: 35,
+                          radius: 24,
                           backgroundColor: Colors.white,
                           backgroundImage: AssetImage(chat.sender.imageUrl),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.65,
+                        width: MediaQuery.of(context).size.width * 0.75,
                         padding: EdgeInsets.only(
                           left: 20,
                         ),
