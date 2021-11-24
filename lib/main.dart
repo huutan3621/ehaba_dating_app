@@ -11,7 +11,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: kPrimaryColor, fontFamily: 'Raleway'),
-      home: welcome_page(), //goi homescreen
+      home: NavigationBar(), //goi homescreen
     ),
   );
 }

@@ -17,11 +17,12 @@ class _pop_upState extends State<pop_up> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(24))),
       child: Container(
-        height: 480.0,
+        height: 520.0,
         width: 360.0,
-        //color: Colors.white,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+        padding: EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -186,6 +187,9 @@ class _pop_upState extends State<pop_up> {
                 }),
 
             //done button
+            SizedBox(
+              height: 4,
+            ),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: (MaterialButton(
