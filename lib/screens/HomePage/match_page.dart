@@ -1,4 +1,6 @@
+import 'package:ehaba_dating_app/components/navigation_bar.dart';
 import 'package:ehaba_dating_app/constraint.dart';
+import 'package:ehaba_dating_app/screens/ProfilePage/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:tcard/tcard.dart';
@@ -24,6 +26,19 @@ class _match_pageState extends State<match_page> {
           backgroundColor: Colors.white,
           toolbarHeight: 60,
           automaticallyImplyLeading: false,
+          leading: IconButton(
+            //back button
+            icon: Icon(
+              Ionicons.chevron_back,
+              color: kPrimaryColor,
+              size: 24,
+            ),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return NavigationBar(); //back to the previous page
+              }));
+            },
+          ),
           title: Text(
             'Trang chủ',
             style: TextStyle(
@@ -113,7 +128,12 @@ class _match_pageState extends State<match_page> {
                   ),
                   //check button
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
+                    },
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     child: Icon(Ionicons.checkmark, size: 24),

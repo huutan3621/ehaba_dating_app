@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:ehaba_dating_app/screens/HomePage/match_page.dart';
+import 'package:ehaba_dating_app/screens/HomePage/pop_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -51,7 +52,11 @@ class _home_pageState extends State<home_page> {
                 child: IconButton(
                   icon: Icon(Ionicons.filter),
                   color: kPrimaryColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) => pop_up());
+                  },
                 ),
               ),
             )
