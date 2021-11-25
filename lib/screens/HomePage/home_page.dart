@@ -105,7 +105,7 @@ class _home_pageState extends State<home_page> {
                         color: kPrimaryColor,
                       )),
                   Text(
-                      '       Bạn đã cô đơn lâu quá rồi đấy\nHãy tìm một ai dó để trò chuyện nào.',
+                      '       Bạn đã cô đơn lâu quá rồi đấy\nHãy tìm một ai đó để trò chuyện nào.',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,

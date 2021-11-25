@@ -1,19 +1,19 @@
 import 'package:ehaba_dating_app/components/navigation_bar.dart';
 import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
-import 'package:ehaba_dating_app/screens/SignUp/sign_up_page_B.dart';
+import 'package:ehaba_dating_app/screens/profile_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 import 'package:ionicons/ionicons.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key key}) : super(key: key);
+class SignUpPageB extends StatefulWidget {
+  const SignUpPageB({Key key}) : super(key: key);
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _SignUpPageBState createState() => _SignUpPageBState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignUpPageBState extends State<SignUpPageB> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,15 +80,26 @@ class _SignUpPageState extends State<SignUpPage> {
 
               SizedBox(height: 20),
 
-              //Email
+              //Password
               Container(
                 margin: EdgeInsets.symmetric(vertical: 5.0),
                 child: TextFormField(
-                  decoration: buildInputDecoration('Địa chỉ Email'),
+                  autocorrect: false,
+                  obscureText: true,
+                  decoration: buildInputDecoration('Mật khẩu'),
                 ),
               ),
 
-              SizedBox(height: 90),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 5.0),
+                child: TextFormField(
+                  autocorrect: false,
+                  obscureText: true,
+                  decoration: buildInputDecoration('Quên mật khẩu'),
+                ),
+              ),
+
+              SizedBox(height: 105),
 
               //Nút chấp nhận
               MaterialButton(
@@ -96,7 +107,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 height: 55,
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return SignUpPageB();
+                    return profile_details_page();
                   }));
                 },
                 color: kPrimaryColor,
