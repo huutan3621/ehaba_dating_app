@@ -188,7 +188,7 @@ class _pop_upState extends State<pop_up> {
 
             //done button
             SizedBox(
-              height: 4,
+              height: 5,
             ),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
@@ -208,9 +208,6 @@ class _pop_upState extends State<pop_up> {
                     ),
                   ),
                 ))),
-            SizedBox(
-              height: 16,
-            )
           ],
         ),
       ),

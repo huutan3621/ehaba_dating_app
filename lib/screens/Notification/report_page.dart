@@ -14,6 +14,9 @@ class report_page extends StatefulWidget {
 
 class _report_pageState extends State<report_page> {
   bool isSelected = false;
+
+  List<String> _problem = ["Giao diện", "Tin Nhắn", "Người dùng"];
+  String _selectedColor;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +63,74 @@ class _report_pageState extends State<report_page> {
                             ],
                           ),
                         ],
+                      ),
+
+                      //select problem
+                      Container(
+                        width: double.infinity,
+                        height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(24)),
+                        child: DropdownButton<String>(
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedColor = value;
+                            });
+                          },
+                          value: _selectedColor,
+
+                          // Hide the default underline
+                          underline: Container(),
+                          hint: Padding(
+                            padding: EdgeInsets.only(left: 2.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                '   Lựa chọn vấn đề gặp phải',
+                                style: TextStyle(
+                                    color: kPrimaryColor, fontSize: 16),
+                              ),
+                            ),
+                          ),
+
+                          isExpanded: true,
+
+                          // The list of options
+                          items: _problem
+                              .map((e) => DropdownMenuItem(
+                                    child: Container(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        e,
+                                        style: TextStyle(fontSize: 16),
+                                      ),
+                                    ),
+                                    value: e,
+                                  ))
+                              .toList(),
+
+                          // Customize the selected item
+                          selectedItemBuilder: (BuildContext context) =>
+                              _problem
+                                  .map(
+                                    (e) => Padding(
+                                      padding: EdgeInsets.only(left: 11.0),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          e,
+                                          style: TextStyle(
+                                            color: kPrimaryColor,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                  .toList(),
+                        ),
                       ),
 
                       MaterialButton(
