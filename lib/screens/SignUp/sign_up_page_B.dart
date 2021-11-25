@@ -95,7 +95,7 @@ class _SignUpPageBState extends State<SignUpPageB> {
                 child: TextFormField(
                   autocorrect: false,
                   obscureText: true,
-                  decoration: buildInputDecoration('Quên mật khẩu'),
+                  decoration: buildInputDecoration('Nhập lại mật khẩu'),
                 ),
               ),
 
