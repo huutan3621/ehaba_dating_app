@@ -88,7 +88,7 @@ class _report_pageState extends State<report_page> {
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                '   Lựa chọn vấn đề gặp phải',
+                                '   Lựa chọn vấn đề bạn gặp phải',
                                 style: TextStyle(
                                     color: kPrimaryColor, fontSize: 16),
                               ),
@@ -191,7 +191,7 @@ class _report_pageState extends State<report_page> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return jobs_page();
+                                return NavigationBar();
                               }));
                             },
                             shape: RoundedRectangleBorder(
