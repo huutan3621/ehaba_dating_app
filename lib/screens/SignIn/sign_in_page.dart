@@ -78,47 +78,59 @@ class _SignInPageState extends State<SignInPage> {
               ),
 
               SizedBox(height: 20),
-
-              //Email
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: TextFormField(
-                  decoration: buildInputDecoration('Địa chỉ Email'),
-                ),
-              ),
-
-              //Password
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: TextFormField(
-                  autocorrect: false,
-                  obscureText: true,
-                  decoration: buildInputDecoration('Mật khẩu'),
-                ),
-              ),
-
-              //Forget password
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Quên mật khẩu?',
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: kPrimaryColor,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
+              Column(
+                children: <Widget>[
+                  //Email
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: TextFormField(
+                      decoration: buildInputDecoration('Địa chỉ Email'),
                     ),
-                  ],
-                ),
-              ),
+                  ),
 
-              SizedBox(height: 20),
+                  //Password
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: TextFormField(
+                      autocorrect: false,
+                      obscureText: true,
+                      decoration: buildInputDecoration('Mật khẩu'),
+                    ),
+                  ),
+
+                  //Forget password
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Quên mật khẩu?',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: kPrimaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 24),
+
+                  Text(
+                    'Nhập sai mật khẩu',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
 
               //Nút chấp nhận
               MaterialButton(

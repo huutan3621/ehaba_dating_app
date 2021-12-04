@@ -80,35 +80,47 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
 
               SizedBox(height: 20),
+              Column(
+                children: <Widget>[
+                  //Email
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: TextFormField(
+                      decoration: buildInputDecoration('Địa chỉ Email'),
+                    ),
+                  ),
 
-              //Email
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: TextFormField(
-                  decoration: buildInputDecoration('Địa chỉ Email'),
-                ),
+                  //Password
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: TextFormField(
+                      autocorrect: false,
+                      obscureText: true,
+                      decoration: buildInputDecoration('Mật khẩu'),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    child: TextFormField(
+                      autocorrect: false,
+                      obscureText: true,
+                      decoration: buildInputDecoration('Nhập lại mật khẩu'),
+                    ),
+                  ),
+
+                  SizedBox(height: 24),
+
+                  Text(
+                    'Nhập sai mật khẩu',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                ],
               ),
-
-              //Password
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: TextFormField(
-                  autocorrect: false,
-                  obscureText: true,
-                  decoration: buildInputDecoration('Mật khẩu'),
-                ),
-              ),
-
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                child: TextFormField(
-                  autocorrect: false,
-                  obscureText: true,
-                  decoration: buildInputDecoration('Nhập lại mật khẩu'),
-                ),
-              ),
-
-              SizedBox(height: 20),
 
               //Nút chấp nhận
               MaterialButton(
