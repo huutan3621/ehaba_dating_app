@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1040266983615",
+    "project_id": "newehaba",
+    "storage_bucket": "newehaba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040266983615:android:a967b1cb07339633a2ae0a",
+        "android_client_info": {
+          "package_name": "com.example.newehaba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040266983615-jerui4kfl0ffibc9168oplh3uo0hdg3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRDie-BLeX37NFmM7zIdj8Kf0HsNW6zsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040266983615-jerui4kfl0ffibc9168oplh3uo0hdg3k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1040266983615-flphh0iekgh3hhtq6mmj0nu6mfd1dfn0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newehaba"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
