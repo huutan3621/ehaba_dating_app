@@ -1,8 +1,8 @@
 class User {
-  final int id;
-  final String name;
-  final String imageUrl;
-  final bool isOnline;
+  final int? id;
+  final String? name;
+  final String? imageUrl;
+  final bool? isOnline;
 
   User({
     this.id,

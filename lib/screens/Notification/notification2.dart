@@ -3,7 +3,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 
 class Notification1 extends StatefulWidget {
-  const Notification1({Key key}) : super(key: key);
+  const Notification1({Key? key}) : super(key: key);
 
   @override
   _Notification1State createState() => _Notification1State();

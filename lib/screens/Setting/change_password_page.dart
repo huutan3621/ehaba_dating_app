@@ -5,7 +5,7 @@ import 'package:ehaba_dating_app/components/input_decoration.dart';
 import 'package:ionicons/ionicons.dart';
 
 class ChangePasswordPage extends StatefulWidget {
-  const ChangePasswordPage({Key key}) : super(key: key);
+  const ChangePasswordPage({Key? key}) : super(key: key);
 
   @override
   _ChangePasswordPageState createState() => _ChangePasswordPageState();

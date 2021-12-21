@@ -7,7 +7,7 @@ import 'package:ehaba_dating_app/components/input_decoration.dart';
 import 'package:ionicons/ionicons.dart';
 
 class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key key}) : super(key: key);
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
   _SignUpPageState createState() => _SignUpPageState();

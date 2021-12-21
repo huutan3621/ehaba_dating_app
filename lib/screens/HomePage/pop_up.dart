@@ -2,7 +2,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:flutter/material.dart';
 
 class pop_up extends StatefulWidget {
-  pop_up({Key key}) : super(key: key);
+  pop_up({Key? key}) : super(key: key);
 
   @override
   _pop_upState createState() => _pop_upState();

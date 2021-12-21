@@ -15,7 +15,7 @@ class NavigationBar extends StatefulWidget {
 class _NavigationBarState extends State<NavigationBar> {
   int previousValue = 0;
   int index = 0;
-  PageController _controller;
+  PageController? _controller;
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
@@ -26,7 +26,7 @@ class _NavigationBarState extends State<NavigationBar> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -65,9 +65,9 @@ class _NavigationBarState extends State<NavigationBar> {
         this.index = index;
         if (index <= 3) {
           previousValue = index;
-          _controller.jumpToPage(index);
+          _controller!.jumpToPage(index);
         } else {
-          _drawerKey.currentState.openEndDrawer();
+          _drawerKey.currentState!.openEndDrawer();
         }
       }),
       items: <BottomNavyBarItem>[

@@ -9,7 +9,7 @@ import 'package:ionicons/ionicons.dart';
 import 'interested_page.dart';
 
 class jobs_page extends StatefulWidget {
-  jobs_page({Key key}) : super(key: key);
+  jobs_page({Key? key}) : super(key: key);
 
   @override
   _jobs_pageState createState() => _jobs_pageState();

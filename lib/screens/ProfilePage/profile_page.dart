@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 
 class ProfilePage extends StatefulWidget {
-  ProfilePage({Key key}) : super(key: key);
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   _ProfilePageState createState() => _ProfilePageState();

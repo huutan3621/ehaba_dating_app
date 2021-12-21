@@ -1,18 +1,27 @@
+import 'package:ehaba_dating_app/bloc/AuthBloc.dart';
 import 'package:ehaba_dating_app/components/navigation_bar.dart';
-import 'package:ehaba_dating_app/screens/HomePage/home_page.dart';
+import 'package:ehaba_dating_app/dialog/loading_dialog.dart';
+import 'package:ehaba_dating_app/dialog/msg_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ehaba_dating_app/components/input_decoration.dart';
 import 'package:ionicons/ionicons.dart';
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({Key key}) : super(key: key);
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   _SignInPageState createState() => _SignInPageState();
 }
 
 class _SignInPageState extends State<SignInPage> {
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
+  bool remember = false;
+  final _formkey = GlobalKey<FormState>();
+
+  AuthBloc authBloc = new AuthBloc();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,7 +106,6 @@ class _SignInPageState extends State<SignInPage> {
                       decoration: buildInputDecoration('Mật khẩu'),
                     ),
                   ),
-
                   //Forget password
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 5.0),
@@ -118,9 +126,7 @@ class _SignInPageState extends State<SignInPage> {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 24),
-
                   Text(
                     'Nhập sai mật khẩu',
                     style: TextStyle(
@@ -136,11 +142,7 @@ class _SignInPageState extends State<SignInPage> {
               MaterialButton(
                 minWidth: double.infinity,
                 height: 55,
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return NavigationBar();
-                  }));
-                },
+                onPressed: _onLoginClick,
                 color: kPrimaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
@@ -159,5 +161,26 @@ class _SignInPageState extends State<SignInPage> {
         ),
       ),
     );
+
   }
+    void _onLoginClick() {
+    String email = _emailController.text;
+    String pass = _passController.text;
+
+    if(_formkey.currentState!.validate()) {
+      LoadingDialog.showLoadingDialog(context, "Loading...");
+      }
+      authBloc.signIn(
+          email,
+          pass,
+          () {
+                LoadingDialog.hideLoadingDialog(context);
+                Navigator.pushReplacementNamed(context, "tab_page");
+            },
+          (msg) {
+                    LoadingDialog.hideLoadingDialog(context);
+                    MsgDialog.showMsgDialog(context, "Đăng nhập thất bại", msg);
+              });
+    }
+
 }

@@ -9,7 +9,7 @@ import 'package:ionicons/ionicons.dart';
 import 'profile_details_page.dart';
 
 class interested_page extends StatefulWidget {
-  interested_page({Key key}) : super(key: key);
+  interested_page({Key? key}) : super(key: key);
 
   @override
   _interested_pageState createState() => _interested_pageState();

@@ -11,7 +11,7 @@ import 'package:ionicons/ionicons.dart';
 import 'profile_details_page.dart';
 
 class about_me_page extends StatefulWidget {
-  about_me_page({Key key}) : super(key: key);
+  about_me_page({Key? key}) : super(key: key);
 
   @override
   _about_me_pageState createState() => _about_me_pageState();

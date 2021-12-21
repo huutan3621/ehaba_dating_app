@@ -6,7 +6,7 @@ import 'package:ehaba_dating_app/screens/jobs_page.dart';
 import 'package:flutter/cupertino.dart';
 
 class report_page extends StatefulWidget {
-  report_page({Key key}) : super(key: key);
+  report_page({Key? key}) : super(key: key);
 
   @override
   _report_pageState createState() => _report_pageState();
@@ -16,7 +16,7 @@ class _report_pageState extends State<report_page> {
   bool isSelected = false;
 
   List<String> _problem = ["Giao diện", "Tin Nhắn", "Người dùng"];
-  String _selectedColor;
+  String? _selectedColor;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

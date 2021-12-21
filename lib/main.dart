@@ -1,17 +1,16 @@
-import 'package:ehaba_dating_app/components/navigation_bar.dart';
-import 'package:ehaba_dating_app/screens/Message/Chat/chat_page.dart';
-import 'package:ehaba_dating_app/screens/Notification/report_page.dart';
-import 'package:ehaba_dating_app/screens/ProfilePage/profile_page.dart';
+
 import 'package:ehaba_dating_app/screens/welcome_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'constraint.dart';
-
-void main() {
-  runApp(
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+    runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: kPrimaryColor, fontFamily: 'Raleway'),
-      home: welcome_page(), //goi homescreen
+      home: const welcome_page(), //goi homescreen
     ),
   );
 }

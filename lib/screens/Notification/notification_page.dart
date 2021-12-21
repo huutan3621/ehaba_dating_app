@@ -56,7 +56,7 @@ class _NotificationPageState extends State<NotificationPage> {
                         child: CircleAvatar(
                           radius: 24,
                           backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(chat.sender.imageUrl),
+                          // backgroundImage: AssetImage(chat.sender.imageUrl),
                         ),
                       ),
                       Container(
@@ -73,13 +73,13 @@ class _NotificationPageState extends State<NotificationPage> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text(
-                                      chat.sender.name,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
+                                    // Text(
+                                    //   chat.sender.name,
+                                    //   style: TextStyle(
+                                    //     fontSize: 14,
+                                    //     fontWeight: FontWeight.bold,
+                                    //   ),
+                                    // ),
                                   ],
                                 ),
                                 Text(

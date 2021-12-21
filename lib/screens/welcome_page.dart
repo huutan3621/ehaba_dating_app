@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:ehaba_dating_app/responsive.dart';
 
 class welcome_page extends StatelessWidget {
-  const welcome_page({Key key}) : super(key: key);
+  const welcome_page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

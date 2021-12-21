@@ -150,7 +150,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         return ChatBubble(
             isMe: messages[index]['isMe'],
             messageType: messages[index]['messageType'],
-            message: messages[index]['message']);
+            message: messages[index]['message'], profileImg: '',);
       }),
     );
   }
@@ -162,11 +162,11 @@ class ChatBubble extends StatelessWidget {
   final String message;
   final int messageType;
   const ChatBubble({
-    Key key,
-    this.isMe,
-    this.profileImg,
-    this.message,
-    this.messageType,
+    Key? key,
+    required this.isMe,
+    required this.profileImg,
+    required this.message,
+    required this.messageType,
   }) : super(key: key);
 
   @override

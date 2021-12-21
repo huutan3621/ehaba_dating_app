@@ -8,7 +8,7 @@ import 'package:ehaba_dating_app/constraint.dart';
 import 'package:ionicons/ionicons.dart';
 
 class home_page extends StatefulWidget {
-  home_page({Key key}) : super(key: key);
+  home_page({Key? key}) : super(key: key);
 
   @override
   _home_pageState createState() => _home_pageState();

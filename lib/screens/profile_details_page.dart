@@ -9,7 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 
 class profile_details_page extends StatefulWidget {
-  profile_details_page({Key key}) : super(key: key);
+  profile_details_page({Key? key}) : super(key: key);
 
   @override
   _profile_details_pageState createState() => _profile_details_pageState();
@@ -18,7 +18,7 @@ class profile_details_page extends StatefulWidget {
 class _profile_details_pageState extends State<profile_details_page> {
   //gender
   List<String> _gender = ["Nam", "Nữ", "Khác"];
-  String _selectedColor;
+  String? _selectedColor;
   //date picker
   DateTime _dateTime = DateTime.now();
   void _showDatePicker() {
@@ -42,12 +42,12 @@ class _profile_details_pageState extends State<profile_details_page> {
               ),
             ),
           ),
-          child: child,
+          child: child!,
         );
       },
     ).then((value) {
       setState(() {
-        _dateTime = value;
+        _dateTime = value!;
       });
     });
   }
