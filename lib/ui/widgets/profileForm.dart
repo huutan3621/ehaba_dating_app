@@ -88,7 +88,7 @@ class _ProfileFormState extends State<ProfileForm> {
       //bloc: _profileBloc,
       listener: (context, state) {
         if (state.isFailure) {
-          print("Failed");
+          print("Có lỗi");
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(
@@ -96,7 +96,7 @@ class _ProfileFormState extends State<ProfileForm> {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('Profile Creation Unsuccessful'),
+                    Text('Tạo Profile thành công'),
                     Icon(Icons.error)
                   ],
                 ),
@@ -120,7 +120,7 @@ class _ProfileFormState extends State<ProfileForm> {
             );
         }
         if (state.isSuccess) {
-          print("Success!");
+          print("Thành công!");
           BlocProvider.of<AuthenticationBloc>(context).add(LoggedIn());
         }
       },
@@ -171,9 +171,9 @@ class _ProfileFormState extends State<ProfileForm> {
                             ),
                     ),
                   ),
-                  textFieldWidget(_nameController, "Name", size),
+                  textFieldWidget(_nameController, "Tên", size),
                   Container(
-                    width: 380,
+                    width: size.width * 0.9,
                     height: 55,
                     decoration: BoxDecoration(
                         color: kSubColor,
@@ -306,7 +306,7 @@ class _ProfileFormState extends State<ProfileForm> {
                       },
                       child: Container(
                         width: size.width * 0.9,
-                        height: size.height * 0.08,
+                        height: size.height * 0.06,
                         decoration: BoxDecoration(
                           color: isButtonEnabled(state)
                               ? Colors.white
@@ -318,7 +318,7 @@ class _ProfileFormState extends State<ProfileForm> {
                             child: Text(
                           "Lưu lại",
                           style: TextStyle(
-                              fontSize: size.height * 0.03,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         )),
@@ -343,9 +343,9 @@ Widget textFieldWidget(controller, text, size) {
       decoration: InputDecoration(
         labelText: text,
         labelStyle:
-            TextStyle(color: kLightTextColor, fontSize: size.height * 0.03),
+            TextStyle(color: kLightTextColor, fontSize: size.height * 0.02),
         focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey, width: 1.0),
+            borderSide: BorderSide(color: kPrimaryColor, width: 1.0),
             borderRadius: BorderRadius.all(Radius.circular(24.0))),
         enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey, width: 1.0),

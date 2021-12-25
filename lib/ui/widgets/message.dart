@@ -1,6 +1,7 @@
 import 'package:ehaba/models/message.dart';
 import 'package:ehaba/repositories/messaging.dart';
 import 'package:ehaba/ui/constants.dart';
+import 'package:ehaba/ui/widgets/constraint.dart';
 import 'package:ehaba/ui/widgets/photo.dart';
 import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -66,7 +67,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 color: _message.senderId == widget.currentUserId
-                                    ? backgroundColour
+                                    ? kPrimaryColor
                                     : Colors.grey[400],
                                 borderRadius: _message.senderId ==
                                         widget.currentUserId

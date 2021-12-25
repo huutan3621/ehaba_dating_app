@@ -1,6 +1,7 @@
 import 'package:ehaba/bloc/signup/bloc.dart';
 import 'package:ehaba/repositories/userRepository.dart';
 import 'package:ehaba/ui/constants.dart';
+import 'package:ehaba/ui/widgets/constraint.dart';
 import 'package:ehaba/ui/widgets/signUpForm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +19,8 @@ class SignUp extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Đăng ký",
-          style: TextStyle(fontSize: 30.0),
+          style: TextStyle(
+              fontSize: 30.0, fontFamily: 'Lobster', color: kPrimaryColor),
         ),
         centerTitle: true,
         backgroundColor: backgroundColour,

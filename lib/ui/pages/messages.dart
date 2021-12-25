@@ -42,7 +42,7 @@ class _MessagesState extends State<Messages> {
             stream: chatStream,
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
-                return Text("No data");
+                return Text("Không có dữ liệu");
               }
 
               if (snapshot.data.docs.isNotEmpty) {
@@ -67,7 +67,7 @@ class _MessagesState extends State<Messages> {
                 }
               } else
                 return Text(
-                  "You don't have any conversations.",
+                  "Bạn không có cuộc trò chuyện nào.",
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 );
             },

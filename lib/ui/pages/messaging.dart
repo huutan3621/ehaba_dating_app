@@ -6,6 +6,7 @@ import 'package:ehaba/models/message.dart';
 import 'package:ehaba/models/user.dart';
 import 'package:ehaba/repositories/messaging.dart';
 import 'package:ehaba/ui/constants.dart';
+import 'package:ehaba/ui/widgets/constraint.dart';
 import 'package:ehaba/ui/widgets/message.dart';
 import 'package:ehaba/ui/widgets/photo.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -76,7 +77,7 @@ class _MessagingState extends State<Messaging> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: backgroundColour,
+        backgroundColor: kPrimaryColor,
         elevation: size.height * 0.02,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -124,7 +125,7 @@ class _MessagingState extends State<Messaging> {
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
                       return Text(
-                        "Start the conversation?",
+                        "Bắt đầu cuộc trò chuyện?",
                         style: TextStyle(
                             fontSize: 16.0, fontWeight: FontWeight.bold),
                       );
@@ -151,7 +152,7 @@ class _MessagingState extends State<Messaging> {
                     } else {
                       return Center(
                         child: Text(
-                          "Start the conversation ?",
+                          "Bắt đầu cuộc trò chuyện ?",
                           style: TextStyle(
                               fontSize: 16.0, fontWeight: FontWeight.bold),
                         ),
@@ -162,7 +163,7 @@ class _MessagingState extends State<Messaging> {
                 Container(
                   width: size.width,
                   height: size.height * 0.06,
-                  color: backgroundColour,
+                  color: kPrimaryColor,
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -190,7 +191,7 @@ class _MessagingState extends State<Messaging> {
                           padding: EdgeInsets.symmetric(
                               horizontal: size.height * 0.005),
                           child: Icon(
-                            Icons.add,
+                            Icons.photo_library,
                             color: Colors.white,
                             size: size.height * 0.04,
                           ),
@@ -226,7 +227,7 @@ class _MessagingState extends State<Messaging> {
                           child: Icon(
                             Icons.send,
                             size: size.height * 0.04,
-                            color: isValid ? Colors.white : Colors.grey,
+                            color: isValid ? Colors.white : Colors.white,
                           ),
                         ),
                       )

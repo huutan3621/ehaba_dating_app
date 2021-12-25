@@ -80,7 +80,7 @@ class _LoginFormState extends State<LoginForm> {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Login Failed"),
+                    Text("Đăng nhập lôi"),
                     Icon(Icons.error),
                   ],
                 ),
@@ -97,7 +97,7 @@ class _LoginFormState extends State<LoginForm> {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(" Logging In..."),
+                    Text(" Đang đăng nhập..."),
                     CircularProgressIndicator(),
                   ],
                 ),
@@ -106,7 +106,7 @@ class _LoginFormState extends State<LoginForm> {
         }
 
         if (state.isSuccess) {
-          print("Success");
+          print("Thành công");
           BlocProvider.of<AuthenticationBloc>(context).add(LoggedIn());
         }
       },
@@ -179,7 +179,7 @@ class _LoginFormState extends State<LoginForm> {
                       decoration: InputDecoration(
                         labelText: "Email",
                         labelStyle: TextStyle(
-                            color: Colors.black, fontSize: size.height * 0.03),
+                            color: Colors.black, fontSize: size.height * 0.02),
                         focusedBorder: OutlineInputBorder(
                             borderSide:
                                 BorderSide(color: kPrimaryColor, width: 1.0),
@@ -208,7 +208,7 @@ class _LoginFormState extends State<LoginForm> {
                       decoration: InputDecoration(
                         labelText: "Mật khẩu",
                         labelStyle: TextStyle(
-                            color: Colors.black, fontSize: size.height * 0.03),
+                            color: Colors.black, fontSize: size.height * 0.02),
                         focusedBorder: OutlineInputBorder(
                             borderSide:
                                 BorderSide(color: kPrimaryColor, width: 1.0),
@@ -232,7 +232,7 @@ class _LoginFormState extends State<LoginForm> {
                               : null,
                           child: Container(
                             width: size.width * 0.9,
-                            height: size.height * 0.08,
+                            height: size.height * 0.06,
                             decoration: BoxDecoration(
                               color: isLoginButtonEnabled(state)
                                   ? Colors.white
@@ -244,7 +244,7 @@ class _LoginFormState extends State<LoginForm> {
                               child: Text(
                                 "Đăng nhập",
                                 style: TextStyle(
-                                    fontSize: size.height * 0.03,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
@@ -269,7 +269,7 @@ class _LoginFormState extends State<LoginForm> {
                           child: Text(
                             "Bạn là người mới? Tạo một tài khoản",
                             style: TextStyle(
-                                fontSize: size.height * 0.025,
+                                fontSize: size.height * 0.02,
                                 color: Colors.black),
                           ),
                         )

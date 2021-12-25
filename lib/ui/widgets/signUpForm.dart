@@ -62,7 +62,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Sign Up failed."),
+                    Text("Đăng ký lỗi."),
                     Icon(Icons.error),
                   ],
                 ),
@@ -77,7 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Signing up..."),
+                    Text("Đang đăng ký..."),
                     CircularProgressIndicator(),
                   ],
                 ),
@@ -85,7 +85,7 @@ class _SignUpFormState extends State<SignUpForm> {
             );
         }
         if (state.isSuccess) {
-          print("Success");
+          print("Thành công");
           BlocProvider.of<AuthenticationBloc>(context).add(LoggedIn());
           Navigator.of(context).pop();
         }
@@ -158,7 +158,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       decoration: InputDecoration(
                         labelText: "Email",
                         labelStyle: TextStyle(
-                            color: Colors.black, fontSize: size.height * 0.03),
+                            color: Colors.black, fontSize: size.height * 0.02),
                         focusedBorder: OutlineInputBorder(
                             borderSide:
                                 BorderSide(color: kPrimaryColor, width: 1.0),
@@ -181,13 +181,13 @@ class _SignUpFormState extends State<SignUpForm> {
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (_) {
                         return !state.isPasswordValid
-                            ? "Invalid Password"
+                            ? "Mật khẩu không hợp lệ"
                             : null;
                       },
                       decoration: InputDecoration(
                         labelText: "Mật khẩu",
                         labelStyle: TextStyle(
-                            color: Colors.black, fontSize: size.height * 0.03),
+                            color: Colors.black, fontSize: size.height * 0.02),
                         focusedBorder: OutlineInputBorder(
                             borderSide:
                                 BorderSide(color: kPrimaryColor, width: 1.0),
@@ -209,7 +209,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           : null,
                       child: Container(
                         width: size.width * 0.9,
-                        height: size.height * 0.08,
+                        height: size.height * 0.06,
                         decoration: BoxDecoration(
                           color: isSignUpButtonEnabled(state)
                               ? Colors.white
@@ -221,7 +221,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           child: Text(
                             "Đăng ký",
                             style: TextStyle(
-                                fontSize: size.height * 0.03,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),

@@ -61,8 +61,8 @@ class _MatchesState extends State<Matches> {
                 pinned: true,
                 backgroundColor: backgroundColour,
                 title: Text(
-                  "Mgười đã ghép đôi",
-                  style: TextStyle(color: Colors.black, fontSize: 30.0),
+                  "Người đã ghép đôi",
+                  style: TextStyle(color: Colors.black, fontSize: 24),
                 ),
               ),
               StreamBuilder<QuerySnapshot>(
@@ -217,7 +217,7 @@ class _MatchesState extends State<Matches> {
                 pinned: true,
                 title: Text(
                   "Người đã thích bạn",
-                  style: TextStyle(color: Colors.black, fontSize: 30),
+                  style: TextStyle(color: Colors.black, fontSize: 24),
                 ),
               ),
               StreamBuilder<QuerySnapshot>(
