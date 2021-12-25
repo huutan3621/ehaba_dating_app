@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "327022017359",
+    "firebase_url": "https://ehaba-14805-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ehaba-14805",
+    "storage_bucket": "ehaba-14805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327022017359:android:0d57928148ea7c50cf633a",
+        "android_client_info": {
+          "package_name": "com.example.ehaba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327022017359-sb2vkgnb4fpao99r2kmbhs808iesuker.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW0iWtKwzD7bh_05NaBXnDlZgZ569_VBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327022017359-sb2vkgnb4fpao99r2kmbhs808iesuker.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327022017359-s5vcoj64rctjh67lflfek3bbs3jnf1m5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ehaba"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
