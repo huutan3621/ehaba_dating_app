@@ -51,24 +51,30 @@ class _MessagesState extends State<Messages> {
                     child: CircularProgressIndicator(),
                   );
                 } else {
-                  return ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: snapshot.data.docs.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      DocumentSnapshot user = snapshot.data.docs[index];
-                      Map userData = user.data();
-                      return ChatWidget(
-                        creationTime: userData['timestamp'],
-                        userId: widget.userId,
-                        selectedUserId: user.id,
-                      );
-                    },
+                  return Container(
+                    decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10)),
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: snapshot.data.docs.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        DocumentSnapshot user = snapshot.data.docs[index];
+                        Map userData = user.data();
+                        return ChatWidget(
+                          creationTime: userData['timestamp'],
+                          userId: widget.userId,
+                          selectedUserId: user.id,
+                        );
+                      },
+                    ),
                   );
                 }
               } else
-                return Text(
-                  "Bạn không có cuộc trò chuyện nào.",
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                return Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    "Bạn không có cuộc trò chuyện nào.",
+                    style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                  ),
                 );
             },
           );
