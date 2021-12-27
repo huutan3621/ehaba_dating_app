@@ -16,7 +16,6 @@ import 'messaging.dart';
 
 class Matches extends StatefulWidget {
   final String userId;
-
   const Matches({this.userId});
 
   @override
