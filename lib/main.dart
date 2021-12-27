@@ -15,5 +15,4 @@ void main() async {
       create: (context) => AuthenticationBloc(userRepository: _userRepository)
         ..add(AppStarted()),
       child: Home(userRepository: _userRepository)));
-
 }

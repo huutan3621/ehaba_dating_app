@@ -5,6 +5,7 @@ import 'package:ehaba/bloc/messaging/messaging_bloc.dart';
 import 'package:ehaba/models/message.dart';
 import 'package:ehaba/models/user.dart';
 import 'package:ehaba/repositories/messaging.dart';
+import 'package:ehaba/ui/constants.dart';
 import 'package:ehaba/ui/widgets/constraint.dart';
 import 'package:ehaba/ui/widgets/message.dart';
 import 'package:ehaba/ui/widgets/photo.dart';
@@ -212,7 +213,7 @@ class _MessagingState extends State<Messaging> {
                               maxLines: null,
                               decoration: null,
                               textAlignVertical: TextAlignVertical.center,
-                              cursorColor: kPrimaryColor,
+                              cursorColor: backgroundColour,
                               textCapitalization: TextCapitalization.sentences,
                             ),
                           ),
