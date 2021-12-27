@@ -162,7 +162,7 @@ class _MessagingState extends State<Messaging> {
                 Container(
                   width: size.width,
                   height: size.height * 0.06,
-                  color: kPrimaryColor,
+                  color: kSubColor,
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -191,7 +191,7 @@ class _MessagingState extends State<Messaging> {
                               horizontal: size.height * 0.005),
                           child: Icon(
                             Icons.photo_library,
-                            color: Colors.white,
+                            color: kPrimaryColor,
                             size: size.height * 0.04,
                           ),
                         ),
@@ -226,7 +226,7 @@ class _MessagingState extends State<Messaging> {
                           child: Icon(
                             Icons.send,
                             size: size.height * 0.04,
-                            color: isValid ? Colors.white : Colors.white,
+                            color: isValid ? kPrimaryColor : kPrimaryColor,
                           ),
                         ),
                       )
