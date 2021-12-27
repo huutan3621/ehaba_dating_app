@@ -10,6 +10,7 @@ import '../constants.dart';
 
 class Tabs extends StatelessWidget {
   final userId;
+
   const Tabs({this.userId});
   @override
   Widget build(BuildContext context) {
