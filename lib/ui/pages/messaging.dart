@@ -5,6 +5,7 @@ import 'package:ehaba/bloc/messaging/messaging_bloc.dart';
 import 'package:ehaba/models/message.dart';
 import 'package:ehaba/models/user.dart';
 import 'package:ehaba/repositories/messaging.dart';
+import 'package:ehaba/ui/constants.dart';
 import 'package:ehaba/ui/widgets/constraint.dart';
 import 'package:ehaba/ui/widgets/message.dart';
 import 'package:ehaba/ui/widgets/photo.dart';
@@ -162,7 +163,7 @@ class _MessagingState extends State<Messaging> {
                 Container(
                   width: size.width,
                   height: size.height * 0.06,
-                  color: kPrimaryColor,
+                  color: kSubColor,
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -191,7 +192,7 @@ class _MessagingState extends State<Messaging> {
                               horizontal: size.height * 0.005),
                           child: Icon(
                             Icons.photo_library,
-                            color: Colors.white,
+                            color: kPrimaryColor,
                             size: size.height * 0.04,
                           ),
                         ),
@@ -212,7 +213,7 @@ class _MessagingState extends State<Messaging> {
                               maxLines: null,
                               decoration: null,
                               textAlignVertical: TextAlignVertical.center,
-                              cursorColor: kPrimaryColor,
+                              cursorColor: backgroundColour,
                               textCapitalization: TextCapitalization.sentences,
                             ),
                           ),
@@ -226,7 +227,7 @@ class _MessagingState extends State<Messaging> {
                           child: Icon(
                             Icons.send,
                             size: size.height * 0.04,
-                            color: isValid ? Colors.white : Colors.white,
+                            color: isValid ? kPrimaryColor : kPrimaryColor,
                           ),
                         ),
                       )
