@@ -72,12 +72,15 @@ class _SearchState extends State<Search> {
 
           getDifference(_user.location);
           if (_user.location == null) {
-            return Text(
-              "No One Here",
-              style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+            return Container(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                "No One Here",
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
             );
           } else
             return profileWidget(

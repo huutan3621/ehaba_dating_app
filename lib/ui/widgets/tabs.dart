@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ehaba/bloc/authentication/authentication_bloc.dart';
-import 'package:ehaba/ui/constants.dart';
-import 'package:ehaba/ui/pages/matches.dart';
 import 'package:ehaba/ui/pages/messages.dart';
+import 'package:ehaba/ui/pages/settings.dart';
+import 'package:flutter/material.dart';
+import 'package:ehaba/ui/pages/matches.dart';
 import 'package:ehaba/ui/pages/search.dart';
 import 'package:ehaba/ui/widgets/constraint.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../constants.dart';
 
 class Tabs extends StatelessWidget {
   final userId;
@@ -19,15 +20,15 @@ class Tabs extends StatelessWidget {
         userId: userId,
       ),
       Messages(userId: userId),
+      SettingPage(),
     ];
-
     return Theme(
       data: ThemeData(
         primaryColor: backgroundColour,
         accentColor: Colors.white,
       ),
       child: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: kPrimaryColor,
@@ -56,10 +57,33 @@ class Tabs extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TabBar(tabs: [
-                      Tab(icon: Icon(Icons.search)),
-                      Tab(icon: Icon(Icons.people)),
-                      Tab(icon: Icon(Icons.message))
+                    TabBar(
+                      // indicator: BoxDecoration(color: kPrimaryColor, borderRadius: BorderRadius.circular(12)),
+                      tabs: [
+                      Tab(
+                          icon: Icon(
+                        Icons.search,
+                        size: 24.0,
+                        color: Colors.white,
+                      )),
+                      Tab(
+                          icon: Icon(
+                        Icons.notifications,
+                        size: 24.0,
+                        color: Colors.white,
+                      )),
+                      Tab(
+                          icon: Icon(
+                        Icons.message,
+                        size: 24.0,
+                        color: Colors.white,
+                      )),
+                      Tab(
+                          icon: Icon(
+                        Icons.person,
+                        size: 24.0,
+                        color: Colors.white,
+                      )),
                     ])
                   ],
                 ),
