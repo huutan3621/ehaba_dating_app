@@ -31,18 +31,23 @@ class Tabs extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: kPrimaryColor,
+            backgroundColor: Colors.white,
             centerTitle: true,
+            elevation: 0,
             title: Text(
               'ehaba',
               style: TextStyle(
                   fontSize: 35.0,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Lobster'),
             ),
             actions: [
               IconButton(
-                  icon: Icon(Icons.logout),
+                  icon: Icon(
+                    Icons.logout,
+                    color: kPrimaryColor,
+                  ),
                   onPressed: () {
                     BlocProvider.of<AuthenticationBloc>(context)
                         .add(LoggedOut());
@@ -51,40 +56,43 @@ class Tabs extends StatelessWidget {
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(60.0),
               child: Container(
-                color: kPrimaryColor,
+                color: Colors.white,
                 height: 48.0,
                 alignment: Alignment.center,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TabBar(
-                      // indicator: BoxDecoration(color: kPrimaryColor, borderRadius: BorderRadius.circular(12)),
-                      tabs: [
-                      Tab(
-                          icon: Icon(
-                        Icons.search,
-                        size: 24.0,
-                        color: Colors.white,
-                      )),
-                      Tab(
-                          icon: Icon(
-                        Icons.notifications,
-                        size: 24.0,
-                        color: Colors.white,
-                      )),
-                      Tab(
-                          icon: Icon(
-                        Icons.message,
-                        size: 24.0,
-                        color: Colors.white,
-                      )),
-                      Tab(
-                          icon: Icon(
-                        Icons.person,
-                        size: 24.0,
-                        color: Colors.white,
-                      )),
-                    ])
+                        indicatorColor: kPrimaryColor,
+                        labelColor: kPrimaryColor,
+                        unselectedLabelColor: Colors.grey,
+                        tabs: [
+                          Tab(
+                              //text: 'Trang chủ',
+                              icon: Icon(
+                            Icons.home,
+                            size: 20.0,
+                            //color: kPrimaryColor,
+                          )),
+                          Tab(
+                              icon: Icon(
+                            Icons.notifications,
+                            size: 24.0,
+                            //color: kPrimaryColor,
+                          )),
+                          Tab(
+                              icon: Icon(
+                            Icons.message,
+                            size: 24.0,
+                            //color: kPrimaryColor,
+                          )),
+                          Tab(
+                              icon: Icon(
+                            Icons.settings,
+                            size: 24.0,
+                            //color: kPrimaryColor,
+                          )),
+                        ])
                   ],
                 ),
               ),
