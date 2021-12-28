@@ -270,6 +270,7 @@ class _LoginFormState extends State<LoginForm> {
                             "Bạn là người mới? Tạo một tài khoản",
                             style: TextStyle(
                                 fontSize: size.height * 0.02,
+                                fontWeight: FontWeight.bold,
                                 color: Colors.black),
                           ),
                         )

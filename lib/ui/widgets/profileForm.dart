@@ -235,19 +235,19 @@ class _ProfileFormState extends State<ProfileForm> {
                               gender = "Male";
                             });
                           }),
-                          genderWidget(
-                            FontAwesomeIcons.transgender,
-                            "Transgender",
-                            size,
-                            gender,
-                            () {
-                              setState(
-                                () {
-                                  gender = "Transgender";
-                                },
-                              );
-                            },
-                          ),
+                          //genderWidget(
+                          //FontAwesomeIcons.transgender,
+                          //"Transgender",
+                          //size,
+                          //gender,
+                          //() {
+                          //setState(
+                          //() {
+                          //gender = "Transgender";
+                          //},
+                          //);
+                          //},
+                          //),
                         ],
                       ),
                       SizedBox(
@@ -279,19 +279,19 @@ class _ProfileFormState extends State<ProfileForm> {
                               interestedIn = "Male";
                             });
                           }),
-                          genderWidget(
-                            FontAwesomeIcons.transgender,
-                            "Transgender",
-                            size,
-                            interestedIn,
-                            () {
-                              setState(
-                                () {
-                                  interestedIn = "Transgender";
-                                },
-                              );
-                            },
-                          ),
+                          //genderWidget(
+                          //FontAwesomeIcons.transgender,
+                          //"Transgender",
+                          //size,
+                          //interestedIn,
+                          //() {
+                          //setState(
+                          //() {
+                          //interestedIn = "Transgender";
+                          //},
+                          //);
+                          //},
+                          //),
                         ],
                       ),
                     ],
